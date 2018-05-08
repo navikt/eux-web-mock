@@ -1,0 +1,18 @@
+{
+  "name": "eux-web-mock",
+  "version": "0.2.0",
+  "description": "express mock server",
+  "author": "Ragnar Westad",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.3.0",
+    "cross-env": "^5.1.3",
+    "express": "^4.16.2",
+    "moment": "^2.19.2",
+    "readable-random": "^0.1.3",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "amock": "node scripts/mock-api-server.js"
+  }
+}
