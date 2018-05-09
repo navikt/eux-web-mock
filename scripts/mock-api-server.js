@@ -18,7 +18,7 @@ const port = process.env.PORT || 3002;
 const router = express.Router();
 
 router.get('/hello', function (req, res) {
-  return res.json('Hello Ragnar Westad')
+  return res.json('Hello from eux-web-mock!')
 });
 
 app.use(allowCrossDomain);
