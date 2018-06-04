@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const serverinfo = require('./modules/server-info');
+const Kodeverk = require('./modules/kodeverk');
 const saksbehandler = require('./modules/saksbehandler');
 const app = express();
 
@@ -24,6 +25,10 @@ const router = express.Router();
  */
 router.get('/saksbehandler', saksbehandler.hent);
 
+/**
+ * KODEVERK
+ */
+router.get('/kodeverk', Kodeverk.hent);
 app.use(allowCrossDomain);
 app.use('/api', router);
 
