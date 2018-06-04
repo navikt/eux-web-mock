@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const serverinfo = require('./modules/server-info');
+const saksbehandler = require('./modules/saksbehandler');
 const app = express();
 
 const allowCrossDomain = (req, res, next)  => {
@@ -17,11 +19,13 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
-router.get('/hello', function (req, res) {
-  return res.json('Hello from eux-web-mock!')
-});
+/**
+ * SAKSBEHANDLER
+ */
+router.get('/saksbehandler', saksbehandler.hent);
 
 app.use(allowCrossDomain);
 app.use('/api', router);
 
 app.listen(port);
+console.log('Test EUX mock API server running on http://'+serverinfo.getIpAdress()+':' + port+'/api');
