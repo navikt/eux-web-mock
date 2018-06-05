@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const serverinfo = require('./modules/server-info');
+const Serverinfo = require('./modules/server-info');
 const Kodeverk = require('./modules/kodeverk');
-const saksbehandler = require('./modules/saksbehandler');
+const Saksbehandler = require('./modules/saksbehandler');
+const Vedlegg = require('./modules/vedlegg');
 const app = express();
 
 const allowCrossDomain = (req, res, next)  => {
@@ -23,7 +24,11 @@ const router = express.Router();
 /**
  * SAKSBEHANDLER
  */
-router.get('/saksbehandler', saksbehandler.hent);
+router.get('/saksbehandler', Saksbehandler.hent);
+/**
+ * VEDLEGG
+ */
+router.post('/vedlegg', Vedlegg.send);
 
 /**
  * KODEVERK
@@ -33,4 +38,4 @@ app.use(allowCrossDomain);
 app.use('/api', router);
 
 app.listen(port);
-console.log('Test EUX mock API server running on http://'+serverinfo.getIpAdress()+':' + port+'/api');
+console.log('Test EUX mock API server running on http://'+Serverinfo.getIpAdress()+':' + port+'/api');
