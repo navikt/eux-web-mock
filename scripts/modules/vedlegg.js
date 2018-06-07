@@ -13,22 +13,26 @@ const happy = require('./happystatus');
  */
 exports.send = (req, res) => {
   const body = req.body;
-  const responseBody = utils.isJSON(body) ? JSON.parse(body) : body;
-
-  const status = happy.happyStatus([200, 200, 200, 401, 500]);
-
-  switch (status) {
-    case 200:
-      return res.json(responseBody);
-    case 401: {
-      const melding = ERR.unauthorizedRequest401(req.url);
-      return res.status(status).send(melding);
+  try {
+    let jsonBody = utils.isJSON(body) ? JSON.parse(body) : body;
+    console.log('sendToRina:', jsonBody);
+    if (jsonBody.journalpostID === "999") {
+      const message = "sendToRina: Simulated status 500 on journalpostID === 999";
+      console.log(message);
+      res.status(500).send(message);
+      return;
     }
-    case 500: {
-      const melding = ERR.serverError500(req.urll);
-      return res.status(status).send(melding);
+    if (jsonBody.journalpostID === "888") {
+      const message = "sendToRina: Simulated status 401 on journalpostID === 888";
+      console.log(message);
+      res.status(401).send(message);
+      return;
     }
-    default:
-      return res.json(responseBody);
+    const response = {};
+    res.json(response);
+  }
+  catch (err) {
+    console.log(err);
+    res.status(500).send(err);
   }
 };
