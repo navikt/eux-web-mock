@@ -5,6 +5,9 @@ const Serverinfo = require('./modules/server-info');
 const Kodeverk = require('./modules/kodeverk');
 const Saksbehandler = require('./modules/saksbehandler');
 const Vedlegg = require('./modules/vedlegg');
+const Personer = require('./modules/personer');
+const Rina = require('./modules/rina');
+
 const app = express();
 
 const allowCrossDomain = (req, res, next)  => {
@@ -31,9 +34,24 @@ router.get('/saksbehandler', Saksbehandler.hent);
 router.post('/vedlegg', Vedlegg.send);
 
 /**
+ * PERSON
+ * ---------------------------------------------------------------
+ */
+router.get('/personer', Personer.hent);
+
+/**
  * KODEVERK
  */
 router.get('/kodeverk', Kodeverk.hent);
+
+/**
+ * RINA
+ */
+router.get('/rina/landkoder', Rina.landkoder);
+router.get('/rina/buckkoder', Rina.buckoder);
+/*
+'/api/rina/sed/?'
+*/
 app.use(allowCrossDomain);
 app.use('/api', router);
 
