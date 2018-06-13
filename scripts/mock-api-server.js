@@ -47,8 +47,11 @@ router.get('/kodeverk', Kodeverk.hent);
 /**
  * RINA
  */
+router.post('/rina/send', Rina.send);
 router.get('/rina/landkoder', Rina.landkoder);
-router.get('/rina/buckkoder', Rina.buckoder);
+router.get('/rina/bucktyper', Rina.bucktyper);
+router.get('/rina/sedtyper', Rina.sedtyper);
+router.get('/rina/institusjoner', Rina.institusjoner);
 /*
 '/api/rina/sed/?'
 */
