@@ -1,32 +1,48 @@
-const fs = require('fs');
-const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
-const Kodeverk = require('./kodeverk/landkoder');
+const ERR = require('./errors');
+const { Kodeverk } = require('./kodeverk');
 
 exports.send = (req, res) => {
-  return res.json({});
+  const body = req.body;
+  const jsonBody = utils.isJSON(body) ? JSON.parse(body) : body;
+  return res.json(jsonBody);
 };
+
 exports.landkoder = (req, res) => {
   return res.json(Kodeverk.landkoder);
 };
 
-exports.bucktyper = (req, res) => {
+exports.buctyper = (req, res) => {
+  const landkoder = Kodeverk.landkoder.reduce((acc, curr) => {acc.push(curr.kode); return acc}, []);
   const landkode = req.query.landkode;
-  console.log('landkode',landkode);
-  const land = Kodeverk.landkoder.find((elem) => elem.kode === landkode);
-  console.log('land', land);
-  return res.json(land);
+  if (landkoder.includes(landkode)) {
+    const buc_koder = Kodeverk.buctyper.reduce((acc, curr) => {acc.push(curr.kode); return acc}, []);
+    return res.json(buc_koder);
+  }
+  const message = ERR.notFound404(req.url, 'Ugyldig landkode: '+ landkode)
+  return res.status(404).send(message);
 };
 
 exports.sedtyper = (req, res) => {
-  const bucktype = req.query.bucktype;
-  console.log('bucktype',bucktype);
-
-  return res.json({});
+  const buctyper = Kodeverk.buctyper.reduce((acc, curr) => {acc.push(curr.kode); return acc}, []);
+  const buctype = req.query.buctype;
+  console.log(buctype);
+  if (buctyper.includes(buctype)) {
+    const sedkoder = Kodeverk.sedtyper.reduce((acc, curr) => {acc.push(curr.kode); return acc}, []);
+    return res.json(sedkoder);
+  }
+  const message = ERR.notFound404(req.url, 'Ugyldig buctype: ' + buctype);
+  return res.status(404).send(message);
 };
 
 exports.institusjoner = (req, res) => {
-  const landkode = req.query.landkode;
-  console.log('landkode',landkode);
+  // TODO: const landkode = req.query.landkode;
+  const instutisjoner = [{
+    kode: '119876543211',
+    term: 'Svensk skattemyndighet'
+  },{
+    kode: '119876543211',
+    term: 'Svensk trygdemyndighet'
+  }];
 
-  return res.json({});
+  return res.json(instutisjoner);
 };

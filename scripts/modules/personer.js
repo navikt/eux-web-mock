@@ -5,7 +5,7 @@ const ERR = require('./errors');
 const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
 
 const lesPerson = (fnr) => {
-  const mockfile = `${MOCK_DATA_DIR}/personer/fnr-${fnr}.json`;
+  const mockfile = `${MOCK_DATA_DIR}/personer/${fnr}.json`;
   return fs.existsSync(mockfile) ? JSON.parse(fs.readFileSync(mockfile, "utf8")) : {};
 };
 

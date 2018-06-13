@@ -49,7 +49,7 @@ router.get('/kodeverk', Kodeverk.hent);
  */
 router.post('/rina/send', Rina.send);
 router.get('/rina/landkoder', Rina.landkoder);
-router.get('/rina/bucktyper', Rina.bucktyper);
+router.get('/rina/buctyper', Rina.buctyper);
 router.get('/rina/sedtyper', Rina.sedtyper);
 router.get('/rina/institusjoner', Rina.institusjoner);
 /*
