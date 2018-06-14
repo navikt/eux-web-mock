@@ -36,6 +36,30 @@ const landkoder = [
     term: 'Finland',
   },
   {
+    kode: 'FR',
+    term: 'France',
+  },
+  {
+    kode: 'GR',
+    term: 'Greece',
+  },
+  {
+    kode: 'IE',
+    term: 'Irland',
+  },
+  {
+    kode: 'IS',
+    term: 'Island',
+  },
+  {
+    kode: 'IT',
+    term: 'Italia',
+  },
+  {
+    kode: 'LV',
+    term: 'Latvia',
+  },
+  {
     kode: 'NO',
     term: 'Norway',
   },
