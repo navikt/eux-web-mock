@@ -2,10 +2,10 @@ const { landkoder } = require('./landkoder');
 const { sector } = require('./sector');
 const { sedtyper } = require('./sedtyper');
 const { buctyper } = require('./buctyper');
-const { institusjon } = require('./institusjon');
+const { institusjoner } = require('./institusjoner');
 
 const kodeverk = {
-  institusjon,
+  institusjoner,
   landkoder,
   sector,
   sedtyper,

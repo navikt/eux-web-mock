@@ -1,7 +1,7 @@
-const institusjon = [
+const institusjoner = [
   {
     kode: '123456',
     term: 'Svenske forsikringskassen',
   }
 ];
-exports.institusjon = institusjon;
+exports.institusjoner = institusjoner;
