@@ -7,7 +7,7 @@ const Saksbehandler = require('./modules/saksbehandler');
 const Vedlegg = require('./modules/vedlegg');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
-const Sak = require('./modules/sak');
+const Eusak = require('./modules/eusak');
 
 const app = express();
 
@@ -45,7 +45,7 @@ router.get('/personer', Personer.hent);
  */
 router.get('/kodeverk', Kodeverk.hent);
 
-router.post('/eusak', Sak.send);
+router.post('/eusak', Eusak.send);
 /**
  * Opprett sak
  */
