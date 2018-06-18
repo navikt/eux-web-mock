@@ -7,6 +7,7 @@ const Saksbehandler = require('./modules/saksbehandler');
 const Vedlegg = require('./modules/vedlegg');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
+const Sak = require('./modules/sak');
 
 const app = express();
 
@@ -43,6 +44,11 @@ router.get('/personer', Personer.hent);
  * KODEVERK
  */
 router.get('/kodeverk', Kodeverk.hent);
+
+router.post('/eusak', Sak.send);
+/**
+ * Opprett sak
+ */
 
 /**
  * RINA
