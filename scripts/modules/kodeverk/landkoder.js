@@ -1,19 +1,35 @@
 const landkoder = [
   {
+    kode: 'AT',
+    term: 'Austria',
+  },
+  {
     kode: 'BE',
-    term: 'Belgia',
+    term: 'Belgium',
   },
   {
     kode: 'BG',
     term: 'Bulgaria',
   },
   {
+    kode: 'HR',
+    term: 'Croatia',
+  },
+  {
+    kode: 'CY',
+    term: 'Cyprus',
+  },
+  {
+    kode: 'CZ',
+    term: 'Czechia',
+  },
+  {
     kode: 'DK',
-    term: 'Danmark',
+    term: 'Denmark',
   },
   {
     kode: 'EE',
-    term: 'Estland',
+    term: 'Estonia',
   },
   {
     kode: 'FI',
@@ -21,11 +37,11 @@ const landkoder = [
   },
   {
     kode: 'FR',
-    term: 'Frankrike',
+    term: 'France',
   },
   {
     kode: 'GR',
-    term: 'Hellas',
+    term: 'Greece',
   },
   {
     kode: 'IE',
@@ -40,84 +56,16 @@ const landkoder = [
     term: 'Italia',
   },
   {
-    kode: 'HR',
-    term: 'Kroatia',
-  },
-  {
-    kode: 'CY',
-    term: 'Kypros',
-  },
-  {
     kode: 'LV',
     term: 'Latvia',
   },
   {
-    kode: 'LI',
-    term: 'Liechtenstein',
-  },
-  {
-    kode: 'LT',
-    term: 'Litauen',
-  },
-  {
-    kode: 'LU',
-    term: 'Luxembourg',
-  },
-  {
-    kode: 'MT',
-    term: 'Malta',
-  },
-  {
-    kode: 'NL',
-    term: 'Nederland',
-  },
-  {
     kode: 'NO',
-    term: 'Norge',
-  },
-  {
-    kode: 'PL',
-    term: 'Polen',
-  },
-  {
-    kode: 'PT',
-    term: 'Portugal',
-  },
-  {
-    kode: 'RO',
-    term: 'Romania',
-  },
-  {
-    kode: 'SK',
-    term: 'Slovakia',
-  },
-  {
-    kode: 'SI',
-    term: 'Slovenia',
-  },
-  {
-    kode: 'ES',
-    term: 'Spania',
-  },
-  {
-    kode: 'GB',
-    term: 'Storbritannia',
+    term: 'Norway',
   },
   {
     kode: 'SE',
-    term: 'Sverige',
-  },
-  {
-    kode: 'DE',
-    term: 'Tyskland',
-  },
-  {
-    kode: 'HU',
-    term: 'Ungarn',
-  },
-  {
-    kode: 'AT',
-    term: 'Østerrike',
+    term: 'Sweden',
   },
 ];
 exports.landkoder = landkoder;
