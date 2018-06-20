@@ -3,9 +3,10 @@ const { sector } = require('./sector');
 const { sedtyper } = require('./sedtyper');
 const { buctyper } = require('./buctyper');
 const { institusjoner } = require('./institusjoner');
+const { familierelasjoner } = require('./familierelasjoner');
 
 const kodeverk = {
-  institusjoner,
+  familierelasjoner,
   landkoder,
   sector,
   sedtyper,
