@@ -3,7 +3,6 @@ const { sector } = require('./sector');
 const { kodemaps } = require('./kodemaps');
 const { sedtyper } = require('./sedtyper');
 const { buctyper } = require('./buctyper');
-const { institusjoner } = require('./institusjoner');
 const { familierelasjoner } = require('./familierelasjoner');
 
 const kodeverk = {
