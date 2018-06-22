@@ -1,15 +1,19 @@
 const family = [
   {
     kode: 'FB_BUC_01',
-    term: 'Determining Competences',
+    term: 'Beslutte kompetent myndighet',
   },
   {
     kode: 'FB_BUC_02',
-    term: 'Discharges of FB',
+    term: 'Overføring av familieytelser',
   },
   {
     kode: 'FB_BUC_03',
-    term: 'FB for Orphans',
+    term: 'Foreldreløse',
+  },
+  {
+    kode: 'FB_BUC_04',
+    term: 'Informasjon om utbetaling angående fortrinnsrett'
   }
 ];
 exports.family = family;
