@@ -47,19 +47,5 @@ const administrative  = [
     kode: 'AD_BUC_12',
     term: 'Change of Participant',
   },
-
-
-  {
-    kode: 'FB_BUC_01',
-    term: 'Determine Competences',
-  },
-  {
-    kode: 'FB_BUC_02',
-    term: 'Discharges of FB',
-  },
-  {
-    kode: 'FB_BUC_03',
-    term: 'FB for Orphans',
-  }
  ];
 exports.administrative = administrative;

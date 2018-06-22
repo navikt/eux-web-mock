@@ -3,9 +3,9 @@ const familierelasjoner = [{
   term: 'Barn'
 },{
   kode: 'PARTNER',
-  term: 'Partner'
+  term: 'Ektefelle eller Partner'
 }, {
   kode: 'ANNEN',
-  term: 'Annen'
+  term: 'Annen person'
 }];
 exports.familierelasjoner = familierelasjoner;
