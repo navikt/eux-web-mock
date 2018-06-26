@@ -6,8 +6,7 @@ const Kodeverk = require('./modules/kodeverk');
 const Saksbehandler = require('./modules/saksbehandler');
 const Vedlegg = require('./modules/vedlegg');
 const Personer = require('./modules/personer');
-const Rina = require('./modules/rina');
-const Eusak = require('./modules/eusak');
+const Rinasak = require('./modules/rinasak');
 
 const app = express();
 
@@ -45,22 +44,11 @@ router.get('/personer', Personer.hent);
  */
 router.get('/kodeverk', Kodeverk.hent);
 
-router.post('/eusak', Eusak.send);
+router.post('/rinasak', Rinasak.send);
 /**
  * Opprett sak
  */
 
-/**
- * RINA
- */
-router.post('/rina/send', Rina.send);
-router.get('/rina/landkoder', Rina.landkoder);
-router.get('/rina/buctyper', Rina.buctyper);
-router.get('/rina/sedtyper', Rina.sedtyper);
-router.get('/rina/institusjoner', Rina.institusjoner);
-/*
-'/api/rina/sed/?'
-*/
 app.use(allowCrossDomain);
 app.use('/api', router);
 
