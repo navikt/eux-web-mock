@@ -4,8 +4,10 @@ const { kodemaps } = require('./kodemaps');
 const { sedtyper } = require('./sedtyper');
 const { buctyper } = require('./buctyper');
 const { familierelasjoner } = require('./familierelasjoner');
+const { kjoenn } = require('./kjoenn');
 
 const kodeverk = {
+  kjoenn,
   familierelasjoner,
   landkoder,
   sector,
