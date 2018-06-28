@@ -1,9 +1,15 @@
 const familierelasjoner = [{
   kode: 'BARN',
-  term: 'Barn'
-},{
-  kode: 'PARTNER',
-  term: 'Ektefelle eller Partner'
+  term: 'Barn av'
+}, {
+  kode: 'EKTE',
+  term: 'Ektefelle til'
+}, {
+  kode: 'REPA',
+  term: 'Registrert partner med'
+}, {
+  kode: 'SAMB',
+  term: 'Samboer med'
 }, {
   kode: 'ANNEN',
   term: 'Annen person'

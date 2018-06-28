@@ -1,0 +1,108 @@
+{
+  "$id": "http://nav.no/eux.json",
+  "type": "object",
+  "properties": {
+    "fnr": {
+      "$id": "/properties/fnr",
+      "type": "string",
+      "title": "The Fnr Schema ",
+      "default": "",
+      "examples": [
+        "02026100715"
+      ],
+      "minLength": 11,
+      "maxLength": 11
+    },
+    "sammensattNavn": {
+      "$id": "/properties/sammensattNavn",
+      "type": "string",
+      "title": "The Sammensattnavn Schema ",
+      "default": "",
+      "examples": [
+        "BLYANT STOR"
+      ]
+    },
+    "kjoenn": {
+      "$id": "/properties/kjoenn",
+      "type": "string",
+      "title": "The Kjoenn Schema ",
+      "default": "M",
+      "examples": [
+        "M","K"
+      ],
+      "minLength": 1,
+      "maxLength": 1,
+      "enum": [
+        "M","K"
+      ]
+    },
+    "relasjoner": {
+      "$id": "/properties/relasjoner",
+      "type": "array",
+      "items": {
+        "$id": "/properties/relasjoner/items",
+        "type": "object",
+        "properties": {
+          "rolle": {
+            "$id": "/properties/relasjoner/items/properties/rolle",
+            "type": "string",
+            "title": "The Rolle Schema ",
+            "default": "",
+            "examples": [
+              "BARN","EKTE","REPA","SAMB","ANNET"
+            ],
+            "enum": [
+              "BARN","EKTE","REPA","SAMB","ANNET"
+            ]
+          },
+          "fnr": {
+            "$id": "/properties/relasjoner/items/properties/fnr",
+            "type": "string",
+            "title": "The Fnr Schema ",
+            "default": "",
+            "examples": [
+              "02026100714"
+            ],
+            "minLength": 11,
+            "maxLength": 11
+          },
+          "sammensattNavn": {
+            "$id": "/properties/relasjoner/items/properties/sammensattNavn",
+            "type": "string",
+            "title": "The Sammensattnavn Schema ",
+            "default": "",
+            "examples": [
+              "BLYANT PEN"
+            ]
+          },
+          "kjoenn": {
+            "$id": "/properties/relasjoner/items/properties/kjoenn",
+            "type": "string",
+            "title": "The Kjoenn Schema ",
+            "default": "",
+            "examples": [
+              "M","K"
+            ],
+            "minLength": 1,
+            "maxLength": 1,
+            "enum": [
+              "M","K"
+            ]
+          }
+        },
+        "required": [
+          "rolle",
+          "fnr",
+          "sammensattNavn",
+          "kjoenn"
+        ]
+      }
+    }
+  },
+  "required": [
+    "fnr",
+    "sammensattNavn",
+    "kjoenn",
+    "relasjoner"
+  ]
+}
