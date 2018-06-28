@@ -7,7 +7,6 @@ const Saksbehandler = require('./modules/saksbehandler');
 const Vedlegg = require('./modules/vedlegg');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
-const Eusak = require('./modules/eusak');
 
 const app = express();
 
@@ -33,7 +32,16 @@ router.get('/saksbehandler', Saksbehandler.hent);
  * VEDLEGG
  */
 router.post('/vedlegg', Vedlegg.send);
+// /vedlegg/ => /rina/vedlegg
+/*
+body = {
+journalpostID,
+dokumentID
+saksnummer => rinasaknummer,
+sedtype => sedID
 
+
+ */
 /**
  * PERSON
  * ---------------------------------------------------------------
@@ -45,22 +53,29 @@ router.get('/personer', Personer.hent);
  */
 router.get('/kodeverk', Kodeverk.hent);
 
-router.post('/eusak', Eusak.send);
-/**
- * Opprett sak
- */
-
 /**
  * RINA
  */
-router.post('/rina/send', Rina.send);
-router.get('/rina/landkoder', Rina.landkoder);
-router.get('/rina/buctyper', Rina.buctyper);
-router.get('/rina/sedtyper', Rina.sedtyper);
-router.get('/rina/institusjoner', Rina.institusjoner);
+router.post('/eusak', Rina.send); // TODO
+router.post('/rina/sak', Rina.send);
+// ?rinasaksnummer=12334566
+router.get('/rina/dokumenter/', Rina.hentDokument);
 /*
-'/api/rina/sed/?'
-*/
+
+//Kun tall
+rinasaksnummer = 161007 => {
+kode: SED_F001,
+rinadokumentID: 760c632d67da4bc, // UUID
+},
+rinasaksnummer = 268016 => [{}],
+
+router.get('/rina/dokumenter/?rinasaksnummer', Rinasak.hent);
+[{
+  kode: 'SED_F001',
+  rinadokumentID: 760c632d67da4bc, // UUID
+}]
+=
+ */
 app.use(allowCrossDomain);
 app.use('/api', router);
 
