@@ -12,6 +12,7 @@ exports.hentDokument = (req, res) => {
     161007: [{
       kode: 'SED_F001',
       rinadokumentID: '760c632d67da4bc',
+      opprettetdato: '2017-08-12T20:17:46.384Z'
     }],
     268016: [],
   };
