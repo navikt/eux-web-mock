@@ -56,7 +56,7 @@ router.get('/kodeverk', Kodeverk.hent);
 /**
  * RINA
  */
-router.post('eusak', Rina.send); // TODO
+router.post('/eusak', Rina.send); // TODO
 router.post('/rina/sak', Rina.send);
 // ?rinasaksnummer=12334566
 router.get('/rina/dokumenter/', Rina.hentDokument);
