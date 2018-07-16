@@ -1,4 +1,4 @@
-const SECTOR2BUC = {
+const SEKTOR2BUC = {
   AD: 'administrative',
   AW: 'awod',
   FB: 'family',
@@ -20,7 +20,7 @@ const BUC2SEDS = {
   FB,
 };
 const kodemaps = {
-  SECTOR2BUC,
+  SEKTOR2BUC,
   BUC2SEDS
 };
 exports.kodemaps = kodemaps;
