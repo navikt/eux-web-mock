@@ -1,4 +1,4 @@
-const sector = [
+const sektor = [
   {
     kode: 'AW',
     term: 'Accidents at Work & Occupational Diseases',
@@ -40,4 +40,4 @@ const sector = [
     term: 'Unemployment Benefits',
   }
 ];
-exports.sector = sector;
+exports.sektor = sektor;
