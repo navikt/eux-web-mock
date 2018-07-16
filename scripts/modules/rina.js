@@ -1,6 +1,12 @@
 const utils = require('./utils');
 
-exports.send = (req, res) => {
+exports.sendSak = (req, res) => {
+  const body = req.body;
+  const responseBody = utils.isJSON(body) ? JSON.parse(body) : body;
+  return res.json(responseBody);
+};
+
+exports.sendVedlegg = (req, res) => {
   const body = req.body;
   const responseBody = utils.isJSON(body) ? JSON.parse(body) : body;
   return res.json(responseBody);

@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const Serverinfo = require('./modules/server-info');
 const Kodeverk = require('./modules/kodeverk');
 const Saksbehandler = require('./modules/saksbehandler');
-const Vedlegg = require('./modules/vedlegg');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 
@@ -28,20 +27,7 @@ const router = express.Router();
  * SAKSBEHANDLER
  */
 router.get('/saksbehandler', Saksbehandler.hent);
-/**
- * VEDLEGG
- */
-router.post('/vedlegg', Vedlegg.send);
-// /vedlegg/ => /rina/vedlegg
-/*
-body = {
-journalpostID,
-dokumentID
-saksnummer => rinasaknummer,
-sedtype => sedID
 
-
- */
 /**
  * PERSON
  * ---------------------------------------------------------------
@@ -56,8 +42,8 @@ router.get('/kodeverk', Kodeverk.hent);
 /**
  * RINA
  */
-router.post('/eusak', Rina.send); // TODO
-router.post('/rina/sak', Rina.send);
+router.post('/rina/sak', Rina.sendSak);
+router.post('/rina/vedlegg', Rina.sendVedlegg);
 // ?rinasaksnummer=12334566
 router.get('/rina/dokumenter/', Rina.hentDokument);
 /*
