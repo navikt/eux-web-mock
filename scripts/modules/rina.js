@@ -1,9 +1,17 @@
 const utils = require('./utils');
 
-exports.send = (req, res) => {
-  const body = req.body;
-  const responseBody = utils.isJSON(body) ? JSON.parse(body) : body;
-  return res.json(responseBody);
+exports.sendSak = (req, res) => {
+  const response = {
+    rinasaksnummer: '320025',
+  };
+  return res.json(response);
+};
+
+exports.sendVedlegg = (req, res) => {
+  const response = {
+    vedleggID: '4ba46d7c7ef94f0e85cd0e4fae98da7d',
+  };
+  return res.json(response);
 };
 
 exports.hentDokument = (req, res) => {
