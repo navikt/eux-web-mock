@@ -11,10 +11,10 @@ const SEKTOR2BUC = {
   UB: 'unemployment',
 };
 const FB = {
-  FB_BUC_01: ['SED_F001'],
-  FB_BUC_02: ['SED_F016'],
-  FB_BUC_03: ['SED_F018','SED_F021'],
-  FB_BUC_04: ['SED_F003']
+  FB_BUC_01: ['F001'],
+  FB_BUC_02: ['F016'],
+  FB_BUC_03: ['F018','F021'],
+  FB_BUC_04: ['F003']
 };
 const BUC2SEDS = {
   FB,

@@ -1,5 +1,5 @@
 const { landkoder } = require('./landkoder');
-const { sector } = require('./sector');
+const { sektor } = require('./sektor');
 const { kodemaps } = require('./kodemaps');
 const { sedtyper } = require('./sedtyper');
 const { buctyper } = require('./buctyper');
@@ -10,7 +10,7 @@ const kodeverk = {
   kjoenn,
   familierelasjoner,
   landkoder,
-  sector,
+  sektor,
   kodemaps,
   sedtyper,
   buctyper,
