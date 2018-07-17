@@ -1,3 +1,4 @@
+const { institusjoner } = require('./institusjoner');
 const { landkoder } = require('./landkoder');
 const { sektor } = require('./sektor');
 const { kodemaps } = require('./kodemaps');
@@ -9,6 +10,7 @@ const { kjoenn } = require('./kjoenn');
 const kodeverk = {
   kjoenn,
   familierelasjoner,
+  institusjoner,
   landkoder,
   sektor,
   kodemaps,
