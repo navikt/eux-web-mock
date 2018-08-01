@@ -13,7 +13,7 @@ const family = [
   },
   {
     kode: 'FB_BUC_04',
-    term: 'Informasjon om utbetaling angående fortrinnsrett'
-  }
+    term: 'Informasjon om utbetaling angående fortrinnsrett',
+  },
 ];
 exports.family = family;

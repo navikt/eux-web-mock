@@ -14,6 +14,6 @@ const miscellaneous = [
   {
     kode: 'MI_BUC_03b',
     term: 'Exchange of Information concerning periods of employment / self employment / residence for Special Non-Contributory Cash Benefits',
-  }
+  },
 ];
 exports.miscellaneous = miscellaneous;
