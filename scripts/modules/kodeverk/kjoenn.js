@@ -8,8 +8,8 @@ const kjoenn = [
     term: 'Kvinne',
   },
   {
-    kode: "U",
-    term: "Ukjent"
-  }
+    kode: 'U',
+    term: 'Ukjent',
+  },
 ];
 exports.kjoenn = kjoenn;

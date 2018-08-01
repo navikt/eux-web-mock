@@ -1,6 +1,6 @@
 const { awod } = require('./awod');
 const { administrative } = require('./administrative');
-const { family } = require('./familie');
+const { family } = require('./family');
 const { horizontal } = require('./horizontal');
 const { legislation } = require('./legislation');
 const { miscellaneous } = require('./miscellaneous');
