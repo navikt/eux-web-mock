@@ -1,5 +1,6 @@
 {
   "fnr": "02026100715",
+  "fdato":"020261",
   "fornavn": "STOR",
   "etternavn": "BLYANT",
   "kjoenn": "M",
@@ -7,16 +8,17 @@
     {
       "rolle": "EKTE",
       "fnr": "02026100714",
+      "fdato":"020261",
       "fornavn": "PEN",
       "etternavn": "BLYANT",
       "kjoenn": "K"
     },
     {
       "rolle": "BARN",
-      "fnr": "02026100714",
+      "fnr": "02026100713",
+      "fdato":"020261",
       "fornavn": "LITEN",
       "etternavn": "BLYANT",
-      "fnr": "02026100713",
       "kjoenn": "M"
     }
   ]
