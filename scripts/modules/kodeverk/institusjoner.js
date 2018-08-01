@@ -14,6 +14,10 @@ const institusjoner = [
   {
     kode: 'dummy',
     term: 'dummy'
+  },
+  {
+    kode: "NAV Test1",
+    term: "NAV Test1"
   }
 ];
 

@@ -4,40 +4,40 @@ const sektor = [
     term: 'Accidents at Work & Occupational Diseases',
   },
   {
-    kode: 'AD',
-    term: 'Administrative',
+    kode: "AD",
+    term: "Administrative"
   },
   {
-    kode: 'FB',
-    term: 'Familiy Benefits',
+    kode: "FB",
+    term: "Familieytelser"
   },
   {
-    kode: 'HZ',
-    term: 'Horizontal',
+    kode: "HZ",
+    term: "Horisontal"
   },
   {
-    kode: 'LA',
-    term: 'Legislation Applicable',
+    kode: "LA",
+    term: "Aktuell lovgivning"
   },
   {
-    kode: 'MI',
-    term: 'Miscellaneous',
+    kode: "MI",
+    term: "Miscellaneous"
   },
   {
-    kode: 'PE',
-    term: 'Pensions',
+    kode: "PE",
+    term: "Pensjon"
   },
   {
-    kode: 'RE',
-    term: 'Recovery',
+    kode: "RE",
+    term: "Gjenoppretting"
   },
   {
-    kode: 'SI',
-    term: 'Sickness',
+    kode: "SI",
+    term: "Sykdom"
   },
   {
-    kode: 'UB',
-    term: 'Unemployment Benefits',
+    kode: "UB",
+    term: "Arbeidsledighet"
   }
 ];
 exports.sektor = sektor;

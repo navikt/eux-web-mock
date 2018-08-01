@@ -6,6 +6,10 @@ const kjoenn = [
   {
     kode: 'K',
     term: 'Kvinne',
+  },
+  {
+    kode: "U",
+    term: "Ukjent"
   }
 ];
 exports.kjoenn = kjoenn;
