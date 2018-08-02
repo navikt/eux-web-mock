@@ -1,6 +1,10 @@
 const sedtyper =
 [
   {
+    "kode": "DUMMY",
+    "term": "Dummy data - ukjent første sed"
+  },
+  {
     kode: 'F001',
     term: 'Anmodning om avgjørelse av kompetanse',
   },

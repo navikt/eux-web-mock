@@ -1,21 +1,16 @@
 const SEKTOR2BUC = {
-  AD: 'administrativ',
+  AD: 'administrative',
   AW: 'awod',
-  FB: 'familie',
-  HZ: 'horisontal',
-  LA: 'lovgivning',
+  FB: 'family',
+  HZ: 'horizontal',
+  LA: 'legislation',
   MI: 'miscellaneous',
-  PE: 'pensjon',
-  RE: 'gjenoppretting',
+  PE: 'pensions',
+  RE: 'recovery',
   SI: 'sickness',
-  UB: 'arbeidsledighet',
+  UB: 'unemployment',
 };
-const FB = {
-  FB_BUC_01: ['F001'],
-  FB_BUC_02: ['F016'],
-  FB_BUC_03: ['F018','F021'],
-  FB_BUC_04: ['F003'],
-};
+// AD => SEDTYPER
 const AD = {
   AD_BUC_01: ['DUMMY'],
   AD_BUC_02: ['DUMMY'],
@@ -30,6 +25,7 @@ const AD = {
   AD_BUC_11: ['DUMMY'],
   AD_BUC_12: ['DUMMY'],
 };
+// AW => SEDTYPER
 const AW = {
   AW_BUC_01a: ['DUMMY'],
   AW_BUC_01b: ['DUMMY'],
@@ -37,7 +33,7 @@ const AW = {
   AW_BUC_03: ['DUMMY'],
   AW_BUC_04a: ['DUMMY'],
   AW_BUC_04b: ['DUMMY'],
-  AW_BUC_04c: ['DUMMY'],
+  AW_BUC_4c: ['DUMMY'],
   AW_BUC_05: ['DUMMY'],
   AW_BUC_06a: ['DUMMY'],
   AW_BUC_06b: ['DUMMY'],
@@ -57,16 +53,31 @@ const AW = {
   AW_BUC_14: ['DUMMY'],
   AW_BUC_15: ['DUMMY'],
   AW_BUC_23: ['DUMMY'],
+}
+// FB => SEDTYPER
+const FB = {
+  FB_BUC_01: ['F001'],
+  FB_BUC_02: ['F016'],
+  FB_BUC_03: ['F018','F021'],
+  FB_BUC_04: ['F003']
 };
+// HZ => SEDTYPER
 const HZ = {
-  H_BUC_01: ['H001'],
-  H_BUC_02a: ['H005'],
-  H_BUC_04: ['H020'],
-  H_BUC_06: ['H065'],
-  H_BUC_07: ['H070'],
-  H_BUC_08: ['H120'],
-  H_BUC_09: ['H121'],
+  HZ_BUC_01: ['H001'],
+  HZ_BUC_02a: ['H005'],
+  HZ_BUC_02b: ['DUMMY'],
+  HZ_BUC_02c: ['DUMMY'],
+  HZ_BUC_03a: ['DUMMY'],
+  HZ_BUC_03b: ['DUMMY'],
+  HZ_BUC_04: ['H020'],
+  HZ_BUC_05: ['DUMMY'],
+  HZ_BUC_06: ['H065'],
+  HZ_BUC_07: ['H070'],
+  HZ_BUC_08: ['H120'],
+  HZ_BUC_09: ['H121'],
+  HZ_BUC_10: ['DUMMY'],
 };
+// LA => SEDTYPER
 const LA = {
   LA_BUC_01: ['A001'],
   LA_BUC_02: ['A003'],
@@ -75,32 +86,37 @@ const LA = {
   LA_BUC_05: ['A010'],
   LA_BUC_06: ['A005'],
 };
+// MI => SEDTYPER
 const MI = {
   MI_BUC_01: ['DUMMY'],
   MI_BUC_02: ['DUMMY'],
   MI_BUC_03a: ['DUMMY'],
   MI_BUC_03b: ['DUMMY'],
 };
+// PE => SEDTYPER
 const PE = {
   P_BUC_01: ['P2000'],
   P_BUC_02: ['P2100'],
   P_BUC_03: ['P2200'],
   P_BUC_04: ['P1000'],
   P_BUC_05: ['P8000'],
-  P_BUC_06: ['P10000','P5000','P6000','P7000'],
+  P_BUC_06: ['P10000','P5000','P6000','P7000',],
   P_BUC_07: ['P11000'],
   P_BUC_08: ['P12000'],
   P_BUC_09: ['P14000'],
   P_BUC_10: ['P15000'],
 };
+// RE => SEDTYPER
 const RE = {
-  R_BUC_01: ['R001'],
-  R_BUC_02: ['R005'],
-  R_BUC_03: ['R008'],
-  R_BUC_05: ['R012'],
-  R_BUC_06: ['R015'],
-  R_BUC_07: ['R017'],
+  RE_BUC_01: ['R001'],
+  RE_BUC_02: ['R005'],
+  RE_BUC_03: ['R008'],
+  RE_BUC_04: ['DUMMY'],
+  RE_BUC_05: ['R012'],
+  RE_BUC_06: ['R015'],
+  RE_BUC_07: ['R017'],
 };
+// SI => SEDTYPER
 const SI = {
   SI_BUC_01: ['DUMMY'],
   SI_BUC_01a: ['DUMMY'],
@@ -128,18 +144,19 @@ const SI = {
   SI_BUC_23: ['DUMMY'],
   SI_BUC_24: ['DUMMY'],
 };
+// UB => SEDTYPER
 const UB = {
   UB_BUC_01: ['U001','U001CB','U003','U005'],
   UB_BUC_02: ['U007','U009'],
   UB_BUC_03: ['U018'],
   UB_BUC_04: ['U020'],
+  UB_BUC_05: ['DUMMY'],
 };
-
 const BUC2SEDS = {
-  FB, AD, AW, HZ, LA, MI, PE, RE, SI, UB,
+  AD, AW, FB, HZ, LA, MI, PE, RE, SI, UB,
 };
 const kodemaps = {
   SEKTOR2BUC,
-  BUC2SEDS,
+  BUC2SEDS
 };
 exports.kodemaps = kodemaps;
