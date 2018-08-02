@@ -3,7 +3,6 @@ const sickness = [
     kode: 'SI_BUC_01',
     term: 'Entitlement - Residence outside Competent Member State without PD',
   },
-
   {
     kode: 'SI_BUC_01a',
     term: 'Entitlement - Residence outside Competent Member State withoud PD',

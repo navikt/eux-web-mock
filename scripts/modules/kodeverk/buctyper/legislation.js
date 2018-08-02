@@ -1,23 +1,27 @@
 const legislation = [
   {
     kode: 'LA_BUC_01',
-    term: 'Exceptions',
+    term: 'Anmodning om unntak',
   },
   {
     kode: 'LA_BUC_02',
-    term: 'Determination of legislation applicable',
+    term: 'Beslutning om lovvalg',
   },
   {
     kode: 'LA_BUC_03',
-    term: 'Notification of relevant information',
+    term: 'Melding om relevant informasjon',
   },
   {
     kode: 'LA_BUC_04',
-    term: 'Notification of posting',
+    term: 'Varsel om levering',
   },
   {
     kode: 'LA_BUC_05',
-    term: 'Notification of legislation applicable',
-  }
+    term: 'Melding om gjeldende lovgivning',
+  },
+  {
+    kode: 'LA_BUC_06',
+    term: 'Anmodning om tilleggsinformasjon',
+  },
 ];
 exports.legislation = legislation;

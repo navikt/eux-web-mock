@@ -1,17 +1,17 @@
 const familierelasjoner = [{
   kode: 'BARN',
-  term: 'Barn av'
+  term: 'Barn av',
 }, {
   kode: 'EKTE',
-  term: 'Ektefelle til'
+  term: 'Ektefelle til',
 }, {
   kode: 'REPA',
-  term: 'Registrert partner med'
+  term: 'Registrert partner med',
 }, {
   kode: 'SAMB',
-  term: 'Samboer med'
+  term: 'Samboer med',
 }, {
   kode: 'ANNEN',
-  term: 'Annen person'
-}];
+  term: 'Annen person',
+},];
 exports.familierelasjoner = familierelasjoner;

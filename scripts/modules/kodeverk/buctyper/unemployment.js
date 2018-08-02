@@ -1,19 +1,19 @@
 const unemployment = [
   {
     kode: 'UB_BUC_01',
-    term: 'Exchange of information',
+    term: 'Utveksling av informasjon for å avgjøre et krav for UB',
   },
   {
     kode: 'UB_BUC_02',
-    term: 'Export',
+    term: 'Eksport av dagpenger',
   },
   {
     kode: 'UB_BUC_03',
-    term: 'Simultaneous registration',
+    term: 'Samtidig registrering',
   },
   {
     kode: 'UB_BUC_04',
-    term: 'Reimbursement of benefits',
+    term: 'Refusjon av dagpenger',
   },
 ];
 exports.unemployment = unemployment;

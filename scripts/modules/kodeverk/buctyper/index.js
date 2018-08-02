@@ -9,8 +9,6 @@ const { recovery } = require('./recovery');
 const { sickness } = require('./sickness');
 const { unemployment } = require('./unemployment');
 
-
-// exports.buctyper = [].concat(awod, administrative, family, horizontal, legislation, miscellaneous, pensions, recovery, sickness, unemployment);
 exports.buctyper = {
   awod, administrative, family, horizontal, legislation, miscellaneous, pensions, recovery, sickness, unemployment,
 };

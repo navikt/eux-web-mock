@@ -9,15 +9,15 @@ const sektor = [
   },
   {
     kode: 'FB',
-    term: 'Familiy Benefits',
+    term: 'Familieytelser',
   },
   {
     kode: 'HZ',
-    term: 'Horizontal',
+    term: 'Horisontal',
   },
   {
     kode: 'LA',
-    term: 'Legislation Applicable',
+    term: 'Aktuell lovgivning',
   },
   {
     kode: 'MI',
@@ -25,11 +25,11 @@ const sektor = [
   },
   {
     kode: 'PE',
-    term: 'Pensions',
+    term: 'Pensjon',
   },
   {
     kode: 'RE',
-    term: 'Recovery',
+    term: 'Gjenoppretting',
   },
   {
     kode: 'SI',
@@ -37,7 +37,7 @@ const sektor = [
   },
   {
     kode: 'UB',
-    term: 'Unemployment Benefits',
+    term: 'Arbeidsledighet',
   }
 ];
 exports.sektor = sektor;
