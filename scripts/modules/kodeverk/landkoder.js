@@ -1,71 +1,71 @@
 const landkoder = [
   {
     kode: 'AT',
-    term: 'Austria',
+    term: 'Østerrike'
   },
   {
     kode: 'BE',
-    term: 'Belgium',
+    term: 'Belgium'
   },
   {
     kode: 'BG',
-    term: 'Bulgaria',
+    term: 'Bulgaria'
   },
   {
     kode: 'HR',
-    term: 'Croatia',
+    term: 'Kroatia'
   },
   {
     kode: 'CY',
-    term: 'Cyprus',
+    term: 'Kypros'
   },
   {
     kode: 'CZ',
-    term: 'Czechia',
+    term: 'Tsjekkia'
   },
   {
     kode: 'DK',
-    term: 'Denmark',
+    term: 'Danmark'
   },
   {
     kode: 'EE',
-    term: 'Estonia',
+    term: 'Estland'
   },
   {
     kode: 'FI',
-    term: 'Finland',
+    term: 'Finland'
   },
   {
     kode: 'FR',
-    term: 'France',
+    term: 'Frankrike'
   },
   {
     kode: 'GR',
-    term: 'Greece',
+    term: 'Hellas'
   },
   {
     kode: 'IE',
-    term: 'Irland',
+    term: 'Irland'
   },
   {
     kode: 'IS',
-    term: 'Island',
+    term: 'Island'
   },
   {
     kode: 'IT',
-    term: 'Italia',
+    term: 'Italia'
   },
   {
     kode: 'LV',
-    term: 'Latvia',
+    term: 'Latvia'
   },
   {
     kode: 'NO',
-    term: 'Norway',
+    term: 'Norge'
   },
   {
     kode: 'SE',
-    term: 'Sweden',
+    term: 'Sverige'
   },
 ];
 exports.landkoder = landkoder;

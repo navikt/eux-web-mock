@@ -33,7 +33,7 @@ const sektor = [
   },
   {
     kode: 'SI',
-    term: 'Sykdom',
+    term: 'Sickness',
   },
   {
     kode: 'UB',
