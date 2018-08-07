@@ -63,19 +63,19 @@ const FB = {
 };
 // HZ => SEDTYPER
 const HZ = {
-  HZ_BUC_01: ['H001'],
-  HZ_BUC_02a: ['H005'],
-  HZ_BUC_02b: ['DUMMY'],
-  HZ_BUC_02c: ['DUMMY'],
-  HZ_BUC_03a: ['DUMMY'],
-  HZ_BUC_03b: ['DUMMY'],
-  HZ_BUC_04: ['H020'],
-  HZ_BUC_05: ['DUMMY'],
-  HZ_BUC_06: ['H065'],
-  HZ_BUC_07: ['H070'],
-  HZ_BUC_08: ['H120'],
-  HZ_BUC_09: ['H121'],
-  HZ_BUC_10: ['DUMMY'],
+  H_BUC_01: ['H001'],
+  H_BUC_02a: ['H005'],
+  H_BUC_02b: ['DUMMY'],
+  H_BUC_02c: ['DUMMY'],
+  H_BUC_03a: ['DUMMY'],
+  H_BUC_03b: ['DUMMY'],
+  H_BUC_04: ['H020'],
+  H_BUC_05: ['DUMMY'],
+  H_BUC_06: ['H065'],
+  H_BUC_07: ['H070'],
+  H_BUC_08: ['H120'],
+  H_BUC_09: ['H121'],
+  H_BUC_10: ['DUMMY'],
 };
 // LA => SEDTYPER
 const LA = {
@@ -108,13 +108,13 @@ const PE = {
 };
 // RE => SEDTYPER
 const RE = {
-  RE_BUC_01: ['R001'],
-  RE_BUC_02: ['R005'],
-  RE_BUC_03: ['R008'],
-  RE_BUC_04: ['DUMMY'],
-  RE_BUC_05: ['R012'],
-  RE_BUC_06: ['R015'],
-  RE_BUC_07: ['R017'],
+  R_BUC_01: ['R001'],
+  R_BUC_02: ['R005'],
+  R_BUC_03: ['R008'],
+  R_BUC_04: ['DUMMY'],
+  R_BUC_05: ['R012'],
+  R_BUC_06: ['R015'],
+  R_BUC_07: ['R017'],
 };
 // SI => SEDTYPER
 const SI = {
