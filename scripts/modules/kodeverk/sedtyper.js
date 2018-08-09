@@ -93,8 +93,8 @@ const sedtyper =
     term: 'Forespørsel om registreringsinformasjon - grensearbeider',
   },
   {
-    kode: 'U020',
-    term: 'U020_Master',
+    kode: 'U020_Master',
+    term: 'U020',
   },
   {
     kode: 'A001',

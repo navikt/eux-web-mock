@@ -58,8 +58,8 @@ const AW = {
 const FB = {
   FB_BUC_01: ['F001'],
   FB_BUC_02: ['F016'],
-  FB_BUC_03: ['F018','F021'],
-  FB_BUC_04: ['F003']
+  FB_BUC_03: ['F021'],
+  FB_BUC_04: ['F003'],
 };
 // HZ => SEDTYPER
 const HZ = {
@@ -149,7 +149,7 @@ const UB = {
   UB_BUC_01: ['U001','U001CB','U003','U005'],
   UB_BUC_02: ['U007','U009'],
   UB_BUC_03: ['U018'],
-  UB_BUC_04: ['U020'],
+  UB_BUC_04: ['U020_Master'],
   UB_BUC_05: ['DUMMY'],
 };
 const BUC2SEDS = {
