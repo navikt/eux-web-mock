@@ -1,10 +1,19 @@
-const utils = require('./utils');
+// const utils = require('./utils');
+// const ERR = require('./errors');
 
 exports.sendSak = (req, res) => {
-  const response = {
-    rinasaksnummer: '320025',
-  };
-  return res.json(response);
+  setTimeout(() => {
+    const response = {
+      rinasaksnummer: '320025',
+    };
+    return res.json(response);
+  }, 3000);
+  /*
+  setTimeout(() => {
+    const melding = ERR.serverError500('/rina/sak');
+    return res.status(500).send(melding);
+  }, 5000);
+  */
 };
 
 exports.sendVedlegg = (req, res) => {

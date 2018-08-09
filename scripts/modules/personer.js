@@ -26,4 +26,9 @@ exports.hent = (req, res) => {
   const url = URL.parse(req.url);
   const melding = ERR.badRequest400(url.pathname, message);
   return res.status(400).send(melding);
+  /*
+  const url = URL.parse(req.url);
+  const melding = ERR.serverError500(url.pathname);
+  return res.status(500).send(melding);
+  */
 };
