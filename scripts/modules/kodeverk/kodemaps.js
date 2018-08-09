@@ -53,7 +53,7 @@ const AW = {
   AW_BUC_14: ['DUMMY'],
   AW_BUC_15: ['DUMMY'],
   AW_BUC_23: ['DUMMY'],
-}
+};
 // FB => SEDTYPER
 const FB = {
   FB_BUC_01: ['F001'],
@@ -100,7 +100,7 @@ const PE = {
   P_BUC_03: ['P2200'],
   P_BUC_04: ['P1000'],
   P_BUC_05: ['P8000'],
-  P_BUC_06: ['P10000','P5000','P6000','P7000',],
+  P_BUC_06: ['P10000', 'P5000', 'P6000', 'P7000'],
   P_BUC_07: ['P11000'],
   P_BUC_08: ['P12000'],
   P_BUC_09: ['P14000'],
@@ -146,8 +146,8 @@ const SI = {
 };
 // UB => SEDTYPER
 const UB = {
-  UB_BUC_01: ['U001','U001CB','U003','U005'],
-  UB_BUC_02: ['U007','U009'],
+  UB_BUC_01: ['U001', 'U001CB', 'U003', 'U005'],
+  UB_BUC_02: ['U007', 'U009'],
   UB_BUC_03: ['U018'],
   UB_BUC_04: ['U020_Master'],
   UB_BUC_05: ['DUMMY'],
@@ -157,6 +157,6 @@ const BUC2SEDS = {
 };
 const kodemaps = {
   SEKTOR2BUC,
-  BUC2SEDS
+  BUC2SEDS,
 };
 exports.kodemaps = kodemaps;

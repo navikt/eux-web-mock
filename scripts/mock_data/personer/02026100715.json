@@ -1,18 +1,24 @@
 {
   "fnr": "02026100715",
-  "sammensattNavn": "BLYANT STOR",
+  "fdato":"020261",
+  "fornavn": "STOR",
+  "etternavn": "BLYANT",
   "kjoenn": "M",
   "relasjoner": [
     {
       "rolle": "EKTE",
       "fnr": "02026100714",
-      "sammensattNavn": "BLYANT PEN",
+      "fdato":"020261",
+      "fornavn": "PEN",
+      "etternavn": "BLYANT",
       "kjoenn": "K"
     },
     {
       "rolle": "BARN",
       "fnr": "02026100713",
-      "sammensattNavn": "BLYANT LITEN",
+      "fdato":"020261",
+      "fornavn": "LITEN",
+      "etternavn": "BLYANT",
       "kjoenn": "M"
     }
   ]
