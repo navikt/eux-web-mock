@@ -5,6 +5,7 @@ exports.sendSak = (req, res) => {
   setTimeout(() => {
     const response = {
       rinasaksnummer: '320025',
+      url: 'http://rina.adeo.no'
     };
     return res.json(response);
   }, 3000);
