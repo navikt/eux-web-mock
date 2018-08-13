@@ -20,7 +20,7 @@ exports.sendSak = (req, res) => {
 exports.sendVedlegg = (req, res) => {
   const response = {
     vedleggID: '4ba46d7c7ef94f0e85cd0e4fae98da7d',
-    url: 'http://gosys.adeo.no'
+    url: 'http://rina.adeo.no'
   };
   return res.json(response);
 };
