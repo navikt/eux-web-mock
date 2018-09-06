@@ -5,7 +5,8 @@ exports.sendSak = (req, res) => {
   setTimeout(() => {
     const response = {
       rinasaksnummer: '320025',
-      url: 'http://rina.adeo.no'
+      // url: 'http://e34apvw004.devillo.no/portal/#/caseManagement/121788?openMode=Read&docId=0ce5ba58d9b846159feaa257575dae02'
+      url: 'http://www.nav.no',
     };
     return res.json(response);
   }, 3000);
@@ -18,11 +19,14 @@ exports.sendSak = (req, res) => {
 };
 
 exports.sendVedlegg = (req, res) => {
-  const response = {
-    vedleggID: '4ba46d7c7ef94f0e85cd0e4fae98da7d',
-    url: 'http://rina.adeo.no'
-  };
-  return res.json(response);
+  setTimeout(() => {
+    const response = {
+      vedleggID: '4ba46d7c7ef94f0e85cd0e4fae98da7d',
+      // url: 'http://e34apvw004.devillo.no/portal/#/caseManagement/121788'
+      url: 'http://www.nav.no',
+    };
+    return res.json(response);
+  }, 3000);
 };
 
 exports.hentDokument = (req, res) => {
