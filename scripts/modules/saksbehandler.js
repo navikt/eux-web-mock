@@ -1,8 +1,16 @@
 const fs = require('fs');
 const _ = require('underscore');
+
 const ERR = require('./errors');
 const happy = require('./happystatus');
+const Schema = require('../test/schema-util');
+
 const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
+
+const MOCK_DATA_SAKSBEHANDLER_DIR = `${MOCK_DATA_DIR}/saksbehandler`;
+module.exports.lesSaksbehandlerKatalog = () => {
+  return Schema.lesKatalog(MOCK_DATA_SAKSBEHANDLER_DIR);
+};
 
 module.exports.hent = (req, res) => {
   try {

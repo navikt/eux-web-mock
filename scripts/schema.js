@@ -2,6 +2,7 @@ const fs = require('fs');
 const { demo } = require('./test/demo');
 const { kodeverk } = require('./test/kodeverk');
 const { person } = require('./test/person');
+const { Saksbehandler } = require('./test/saksbehandler');
 // const Schema = require('./test/schema-util');
 
 
@@ -20,6 +21,7 @@ const katalogMap = new Map([
   ['demo', demo],
   ['kodeverk', kodeverk],
   ['personer', person],
+  ['saksbehandler', Saksbehandler],
 ]);
 
 const testAll = () => {
