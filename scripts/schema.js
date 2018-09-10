@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { demo } = require('./test/demo');
 const { kodeverk } = require('./test/kodeverk');
+const { person } = require('./test/person');
 // const Schema = require('./test/schema-util');
 
 
@@ -18,6 +19,7 @@ log4js.configure({
 const katalogMap = new Map([
   ['demo', demo],
   ['kodeverk', kodeverk],
+  ['personer', person],
 ]);
 
 const testAll = () => {

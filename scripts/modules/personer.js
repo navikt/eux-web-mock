@@ -1,12 +1,18 @@
 const fs = require('fs');
 const URL = require('url');
 
+const Schema = require('../test/schema-util');
 const ERR = require('./errors');
 const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
-
+const PERSON_MOCK_DATA_DIR = `${MOCK_DATA_DIR}/personer`;
 const lesPerson = (fnr) => {
-  const mockfile = `${MOCK_DATA_DIR}/personer/${fnr}.json`;
+  const mockfile = `${PERSON_MOCK_DATA_DIR}/${fnr}.json`;
   return fs.existsSync(mockfile) ? JSON.parse(fs.readFileSync(mockfile, "utf8")) : {};
+};
+
+
+module.exports.lesPersonKatalog = () => {
+  return Schema.lesKatalog(PERSON_MOCK_DATA_DIR);
 };
 
 module.exports.hent = (req, res) => {
