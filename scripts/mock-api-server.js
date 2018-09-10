@@ -33,6 +33,7 @@ router.get('/saksbehandler', Saksbehandler.hent);
  * ---------------------------------------------------------------
  */
 router.get('/personer', Personer.hent);
+router.get('/personer/andre', Personer.hentAndre);
 
 /**
  * KODEVERK

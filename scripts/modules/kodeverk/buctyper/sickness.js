@@ -100,4 +100,4 @@ const sickness = [
     term: 'Aggregation of Periods – Insurance Risk Type: Sickness, Paternity and Maternity',
   }
 ];
-exports.sickness = sickness;
+module.exports.sickness = sickness;

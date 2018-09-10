@@ -17,13 +17,13 @@ const kodeverk = {
   sedtyper,
   buctyper,
 };
-exports.Kodeverk = kodeverk;
+module.exports.Kodeverk = kodeverk;
 
 /**
  * Hent kodeverk
  * @param req
  * @param res
  */
-exports.hent = (req, res) => {
+module.exports.hent = (req, res) => {
   res.json(kodeverk);
 };

@@ -221,4 +221,4 @@ const sedtyper =
     term: 'Overføring av pensjonssaker til EESSI',
   },
 ];
-exports.sedtyper = sedtyper;
+module.exports.sedtyper = sedtyper;

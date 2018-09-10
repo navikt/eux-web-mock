@@ -16,4 +16,4 @@ const family = [
     term: 'Informasjon om utbetaling angående fortrinnsrett',
   },
 ];
-exports.family = family;
+module.exports.family = family;

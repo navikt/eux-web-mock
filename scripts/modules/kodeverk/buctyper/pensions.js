@@ -40,4 +40,4 @@ const pensions = [
     term: 'Transitional cases',
   },
 ];
-exports.pensions = pensions;
+module.exports.pensions = pensions;

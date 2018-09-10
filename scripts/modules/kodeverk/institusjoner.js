@@ -21,4 +21,4 @@ const institusjoner = [
   },
 ];
 
-exports.institusjoner = institusjoner;
+module.exports.institusjoner = institusjoner;

@@ -104,4 +104,4 @@ const awod = [
     term: 'Refund of Overpayment',
   }
 ];
-exports.awod = awod;
+module.exports.awod = awod;

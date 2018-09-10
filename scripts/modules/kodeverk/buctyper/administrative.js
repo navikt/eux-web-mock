@@ -48,4 +48,4 @@ const administrative  = [
     term: 'Change of Participant',
   },
  ];
-exports.administrative = administrative;
+module.exports.administrative = administrative;
