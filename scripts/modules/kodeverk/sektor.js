@@ -40,4 +40,4 @@ const sektor = [
     term: 'Arbeidsledighet',
   }
 ];
-exports.sektor = sektor;
+module.exports.sektor = sektor;

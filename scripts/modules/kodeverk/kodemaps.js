@@ -159,4 +159,4 @@ const kodemaps = {
   SEKTOR2BUC,
   BUC2SEDS,
 };
-exports.kodemaps = kodemaps;
+module.exports.kodemaps = kodemaps;
