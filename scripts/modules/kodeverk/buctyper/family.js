@@ -9,7 +9,7 @@ const family = [
   },
   {
     kode: 'FB_BUC_03',
-    term: 'Foreldreløse',
+    term: 'Tilleggsytelser for foreldreløse barn',
   },
   {
     kode: 'FB_BUC_04',

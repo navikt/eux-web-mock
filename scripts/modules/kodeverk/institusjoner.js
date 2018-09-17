@@ -2,6 +2,7 @@ const institusjoner = [
   {
     kode: 'NAVT001',
     term: 'NAVT001',
+    land: 'NO',
     bucs: [
       "FB_BUC_01",
       "P_BUC_01",
@@ -13,6 +14,7 @@ const institusjoner = [
   {
     kode: 'NAVT002',
     term: 'NAVT002',
+    land: 'NO',
     bucs: [
       "FB_BUC_01",
       "P_BUC_01",
@@ -24,6 +26,7 @@ const institusjoner = [
   {
     kode: 'NAVT003',
     term: 'NAVT003',
+    land: 'NO',
     bucs: [
       "FB_BUC_01",
       "P_BUC_01",
@@ -35,6 +38,7 @@ const institusjoner = [
   {
     kode: 'dummy',
     term: 'dummy',
+    land: 'NO',
     bucs: [
       "FB_BUC_01",
       "P_BUC_01",
@@ -46,6 +50,7 @@ const institusjoner = [
   {
     kode: 'NAV Test1',
     term: 'NAV Test1',
+    land: 'NO',
     bucs: [
       "FB_BUC_01",
       "P_BUC_01",
