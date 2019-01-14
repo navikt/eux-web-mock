@@ -12,4 +12,4 @@ const kjoenn = [
     term: 'Ukjent',
   },
 ];
-exports.kjoenn = kjoenn;
+module.exports.kjoenn = kjoenn;

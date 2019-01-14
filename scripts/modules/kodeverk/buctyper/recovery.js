@@ -28,4 +28,4 @@ const recovery = [
     term: 'Krav om inndrivelse',
   },
 ];
-exports.recovery = recovery;
+module.exports.recovery = recovery;

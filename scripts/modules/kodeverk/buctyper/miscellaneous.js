@@ -16,4 +16,4 @@ const miscellaneous = [
     term: 'Exchange of Information concerning periods of employment / self employment / residence for Special Non-Contributory Cash Benefits',
   },
 ];
-exports.miscellaneous = miscellaneous;
+module.exports.miscellaneous = miscellaneous;

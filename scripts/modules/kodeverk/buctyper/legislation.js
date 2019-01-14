@@ -24,4 +24,4 @@ const legislation = [
     term: 'Anmodning om tilleggsinformasjon',
   },
 ];
-exports.legislation = legislation;
+module.exports.legislation = legislation;

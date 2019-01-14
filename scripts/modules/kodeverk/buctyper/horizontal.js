@@ -52,4 +52,4 @@ const horizontal = [
     term: 'Request for Administrative Check',
   },
 ];
-exports.horizontal = horizontal;
+module.exports.horizontal = horizontal;

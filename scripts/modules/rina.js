@@ -1,7 +1,7 @@
 // const utils = require('./utils');
 // const ERR = require('./errors');
 
-exports.sendSak = (req, res) => {
+module.exports.sendSak = (req, res) => {
   setTimeout(() => {
     const response = {
       rinasaksnummer: '320025',
@@ -18,7 +18,7 @@ exports.sendSak = (req, res) => {
   */
 };
 
-exports.sendVedlegg = (req, res) => {
+module.exports.sendVedlegg = (req, res) => {
   setTimeout(() => {
     const response = {
       vedleggID: '4ba46d7c7ef94f0e85cd0e4fae98da7d',
@@ -29,7 +29,7 @@ exports.sendVedlegg = (req, res) => {
   }, 3000);
 };
 
-exports.hentDokument = (req, res) => {
+module.exports.hentDokument = (req, res) => {
   const rinasaksnummer = req.query.rinasaksnummer;
   const rinaDokumenter = {
     161007: [{

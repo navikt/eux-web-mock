@@ -14,4 +14,4 @@ const familierelasjoner = [{
   kode: 'ANNEN',
   term: 'Annen person',
 },];
-exports.familierelasjoner = familierelasjoner;
+module.exports.familierelasjoner = familierelasjoner;

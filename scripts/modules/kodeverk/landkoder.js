@@ -68,4 +68,4 @@ const landkoder = [
     term: 'Sverige'
   },
 ];
-exports.landkoder = landkoder;
+module.exports.landkoder = landkoder;

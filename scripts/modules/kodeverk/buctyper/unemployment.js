@@ -16,4 +16,4 @@ const unemployment = [
     term: 'Refusjon av dagpenger',
   },
 ];
-exports.unemployment = unemployment;
+module.exports.unemployment = unemployment;
