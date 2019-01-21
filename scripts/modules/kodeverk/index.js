@@ -25,5 +25,10 @@ module.exports.Kodeverk = kodeverk;
  * @param res
  */
 module.exports.hent = (req, res) => {
+  const kode = req.params.kode;
+  if (kode) {
+    res.json(kodeverk[kode]);
+    return;
+  }
   res.json(kodeverk);
 };
