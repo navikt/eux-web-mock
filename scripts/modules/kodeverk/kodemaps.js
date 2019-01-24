@@ -10,7 +10,7 @@ const SEKTOR2BUC = {
   SI: 'sickness',
   UB: 'unemployment',
 };
-const SEKTOR2BOMA = {
+const SEKTOR2FAGSAK = {
   AD: 'family',
   AW: 'family',
   FB: 'family',
@@ -168,7 +168,7 @@ const BUC2SEDS = {
   AD, AW, FB, HZ, LA, MI, PE, RE, SI, UB,
 };
 const kodemaps = {
-  SEKTOR2BOMA,
+  SEKTOR2FAGSAK,
   SEKTOR2BUC,
   BUC2SEDS,
 };
