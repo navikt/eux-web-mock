@@ -1,3 +1,9 @@
+const _ = require('underscore');
+
+// import institusjoner som er knyttet til land
+const institusjoner = require('../../mock_data/institusjoner');
+// Hent list med unique 'landkode'er => f.eks ['NO', ...]
+const land_med_institusjoner = _.uniq(_.map(institusjoner, 'landkode'));
 const landkoder = [
   {
     kode: 'AT',
@@ -68,4 +74,5 @@ const landkoder = [
     term: 'Sverige'
   },
 ];
-module.exports.landkoder = landkoder;
+// exporter en liste landkoder som har institusjoner
+module.exports.landkoder = _.filter(landkoder, (land) => _.contains(land_med_institusjoner, land.kode));

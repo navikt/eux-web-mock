@@ -6,6 +6,7 @@ const Kodeverk = require('./modules/kodeverk');
 const Saksbehandler = require('./modules/saksbehandler');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
+const Institusjoner = require('./modules/institusjoner');
 
 const app = express();
 
@@ -38,7 +39,9 @@ router.get('/personer/andre', Personer.hentAndre);
 /**
  * KODEVERK
  */
-router.get('/kodeverk', Kodeverk.hent);
+router.get('/kodeverk/:kode?', Kodeverk.hent);
+
+router.get('/institusjoner/:buctype?', Institusjoner.hent);
 
 /**
  * RINA
