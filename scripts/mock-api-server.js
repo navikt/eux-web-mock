@@ -7,6 +7,7 @@ const Saksbehandler = require('./modules/saksbehandler');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 const Institusjoner = require('./modules/institusjoner');
+const Fagsaker = require('./modules/fagsaker');
 
 const app = express();
 
@@ -43,6 +44,7 @@ router.get('/kodeverk/:kode?', Kodeverk.hent);
 
 router.get('/institusjoner/:buctype?', Institusjoner.hent);
 
+router.get('/fagsaker/:fnr/saksliste', Fagsaker.saksliste);
 /**
  * RINA
  */
@@ -51,6 +53,7 @@ router.post('/rina/vedlegg', Rina.sendVedlegg);
 // ?rinasaksnummer=12334566
 router.get('/rina/dokumenter/', Rina.hentDokument);
 /*
+
 
 //Kun tall
 rinasaksnummer = 161007 => {

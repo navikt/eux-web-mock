@@ -10,6 +10,18 @@ const SEKTOR2BUC = {
   SI: 'sickness',
   UB: 'unemployment',
 };
+const SEKTOR2BOMA = {
+  AD: 'family',
+  AW: 'family',
+  FB: 'family',
+  HZ: 'family',
+  LA: 'family',
+  MI: 'family',
+  PE: 'family',
+  RE: 'family',
+  SI: 'family',
+  UB: 'family',
+};
 // AD => SEDTYPER
 const AD = {
   AD_BUC_01: ['DUMMY'],
@@ -156,6 +168,7 @@ const BUC2SEDS = {
   AD, AW, FB, HZ, LA, MI, PE, RE, SI, UB,
 };
 const kodemaps = {
+  SEKTOR2BOMA,
   SEKTOR2BUC,
   BUC2SEDS,
 };
