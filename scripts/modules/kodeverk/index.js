@@ -1,4 +1,4 @@
-const { behandlingstema } = require('./behandlingstema');
+const { tema } = require('./tema');
 const { buctyper } = require('./buctyper');
 const { familierelasjoner } = require('./familierelasjoner');
 const { kjoenn } = require('./kjoenn');
@@ -8,7 +8,7 @@ const { sedtyper } = require('./sedtyper');
 const { sektor } = require('./sektor');
 
 const kodeverk = {
-  behandlingstema,
+  tema,
   buctyper,
   familierelasjoner,
   kjoenn,

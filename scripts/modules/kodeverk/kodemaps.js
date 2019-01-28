@@ -11,16 +11,8 @@ const SEKTOR2BUC = {
   UB: 'unemployment',
 };
 const SEKTOR2FAGSAK = {
-  AD: 'family',
-  AW: 'family',
   FB: 'family',
-  HZ: 'family',
-  LA: 'family',
-  MI: 'family',
-  PE: 'family',
-  RE: 'family',
-  SI: 'family',
-  UB: 'family',
+  UB: 'unemployment',
 };
 // AD => SEDTYPER
 const AD = {

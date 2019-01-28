@@ -1,11 +1,15 @@
 const family = [
   {
-    kode: 'a2873465',
+    kode: 'GENERELL',
     term: 'Generell',
   },
   {
-    kode: 'a345',
+    kode: 'BARNETRYGD',
     term: 'Barnetrygd',
+  },
+  {
+    kode: 'KONTANTSTOTTE',
+    term: 'Kontantstøtte',
   },
 ];
 module.exports.family = family;
