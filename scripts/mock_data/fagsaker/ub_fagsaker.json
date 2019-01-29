@@ -1,0 +1,24 @@
+[
+  {
+    "saksid": "34243232223",
+    "sakstype": "Dagpenger",
+    "tema": {
+      "kode": "DAGPENGER",
+      "term": "Dagpenger"
+    },
+    "fagsystem": "Arena",
+    "opprettet": "2018-10-15",
+    "status": "Avsluttet"
+  },
+  {
+    "saksid": "a2873465",
+    "sakstype": "Generell",
+    "tema": {
+      "kode": "GENERELL",
+      "term": "Generell"
+    },
+    "fagsystem": "Gosys",
+    "opprettet": "2018-10-15",
+    "status": "Ikke påbegynt"
+  }
+]

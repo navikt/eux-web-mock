@@ -10,6 +10,10 @@ const SEKTOR2BUC = {
   SI: 'sickness',
   UB: 'unemployment',
 };
+const SEKTOR2FAGSAK = {
+  FB: 'family',
+  UB: 'unemployment',
+};
 // AD => SEDTYPER
 const AD = {
   AD_BUC_01: ['DUMMY'],
@@ -156,6 +160,7 @@ const BUC2SEDS = {
   AD, AW, FB, HZ, LA, MI, PE, RE, SI, UB,
 };
 const kodemaps = {
+  SEKTOR2FAGSAK,
   SEKTOR2BUC,
   BUC2SEDS,
 };

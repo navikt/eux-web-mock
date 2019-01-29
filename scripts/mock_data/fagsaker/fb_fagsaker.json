@@ -1,0 +1,35 @@
+[
+  {
+    "saksid": "7865457854345",
+    "sakstype": "Barnetrygd",
+    "tema": {
+      "kode": "BARNETRYGD",
+      "term": "Barnetrygd"
+    },
+    "fagsystem": "Infotrygd",
+    "opprettet": "2018-10-15",
+    "status": "Ikke påbegynt"
+  },
+  {
+    "saksid": "73465",
+    "sakstype": "Generell",
+    "tema": {
+      "kode": "GENERELL",
+      "term": "Generell"
+    },
+    "fagsystem": "Gosys",
+    "opprettet": "2018-10-15",
+    "status": "Mottatt"
+  },
+  {
+  "saksid": "7865457854366",
+  "sakstype": "Kontantstøtte",
+  "tema": {
+    "kode": "KONTANTSTOTTE",
+    "term": "Kontantstøtte"
+  },
+  "fagsystem": "Infotrygd",
+  "opprettet": "2018-10-15",
+  "status": "Ikke påbegynt"
+  }
+]
