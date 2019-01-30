@@ -8,6 +8,7 @@ const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 const Institusjoner = require('./modules/institusjoner');
 const Fagsaker = require('./modules/fagsaker');
+const Arbeidsforhold = require('./modules/arbeidsforhold');
 
 const app = express();
 
@@ -25,6 +26,10 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
+/**
+ * ARBEIDSFORHOLD
+ */
+router.get('/arbeidsforhold', Arbeidsforhold.hent);
 /**
  * SAKSBEHANDLER
  */
