@@ -1,6 +1,6 @@
 {
   "name": "eux-web-mock",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "express mock server",
   "author": "Ragnar Westad",
   "license": "MIT",
