@@ -29,7 +29,7 @@ const router = express.Router();
 /**
  * ARBEIDSFORHOLD
  */
-router.get('/arbeidsforhold', Arbeidsforhold.hent);
+router.get('/arbeidsforhold/:fnr/ansettelser', Arbeidsforhold.ansettelser);
 /**
  * SAKSBEHANDLER
  */
