@@ -1,16 +1,26 @@
 [
   {
+    "orgnr": "982683955",
+    "arbeidsGiver": "EXPERIS AS",
+    "ansettelsesPeriode": {
+      "fom" : "2018-02-01",
+      "tom" : null
+    }
+  },
+  {
+    "orgnr": "943049467",
+    "arbeidsGiver": "SKANSKA NORGE AS",
+    "ansettelsesPeriode": {
+      "fom" : "2011-09-12",
+      "tom" : "2018-01-12"
+    }
+  },
+  {
+    "orgnr": "810072512",
     "arbeidsGiver": "EIKEN OG TORSKEN",
     "ansettelsesPeriode": {
       "fom" : "2003-04-12",
       "tom" : "2009-01-10"
-    }
-  },
-  {
-    "arbeidsGiver": "REMA 1000",
-    "ansettelsesPeriode": {
-      "fom" : "2011-09-12",
-      "tom" : "2018-01-12"
     }
   }
 ]
