@@ -44,7 +44,7 @@ router.get('/kodeverk/:kode?', Kodeverk.hent);
 
 router.get('/institusjoner/:buctype?', Institusjoner.hent);
 
-router.get('/fagsaker/:fnr/sak', Fagsaker.saksliste);
+router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 /**
  * RINA
  */
