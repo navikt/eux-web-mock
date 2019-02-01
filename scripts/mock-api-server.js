@@ -8,7 +8,7 @@ const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 const Institusjoner = require('./modules/institusjoner');
 const Fagsaker = require('./modules/fagsaker');
-const Arbeidsforhold = require('./modules/arbeidsforhold');
+const Arbeidsforhold = require('./modules/arbeidsgivere');
 
 const app = express();
 
@@ -29,7 +29,7 @@ const router = express.Router();
 /**
  * ARBEIDSFORHOLD
  */
-router.get('/arbeidsforhold/:fnr/ansettelser', Arbeidsforhold.ansettelser);
+router.get('/arbeidsforhold/:fnr/arbeidsgivere', Arbeidsforhold.arbeidsgivere);
 /**
  * SAKSBEHANDLER
  */
