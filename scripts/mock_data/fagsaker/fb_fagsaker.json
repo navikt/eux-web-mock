@@ -3,7 +3,7 @@
     "saksid": "7865457854345",
     "sakstype": "Barnetrygd",
     "tema": {
-      "kode": "BARNETRYGD",
+      "kode": "BAR",
       "term": "Barnetrygd"
     },
     "fagsystem": "Infotrygd",
@@ -14,7 +14,7 @@
     "saksid": "73465",
     "sakstype": "Generell",
     "tema": {
-      "kode": "GENERELL",
+      "kode": "GEN",
       "term": "Generell"
     },
     "fagsystem": "Gosys",
@@ -25,7 +25,7 @@
   "saksid": "7865457854366",
   "sakstype": "Kontantstøtte",
   "tema": {
-    "kode": "KONTANTSTOTTE",
+    "kode": "KON",
     "term": "Kontantstøtte"
   },
   "fagsystem": "Infotrygd",

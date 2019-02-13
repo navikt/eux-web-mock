@@ -3,7 +3,7 @@
     "saksid": "34243232223",
     "sakstype": "Dagpenger",
     "tema": {
-      "kode": "DAGPENGER",
+      "kode": "DAG",
       "term": "Dagpenger"
     },
     "fagsystem": "Arena",
@@ -14,7 +14,7 @@
     "saksid": "a2873465",
     "sakstype": "Generell",
     "tema": {
-      "kode": "GENERELL",
+      "kode": "GEN",
       "term": "Generell"
     },
     "fagsystem": "Gosys",

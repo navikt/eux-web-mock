@@ -13,7 +13,7 @@ module.exports.lesInstitusjoner = lesInstitusjoner;
 module.exports.hent = (req, res) => {
   const buctype = req.params.buctype;
   const landkode = req.query.landkode;
-  console.log('Institusjoner', buctype, landkode);
+  // console.log('Institusjoner', buctype, landkode);
   const institusjoner = lesInstitusjoner(buctype);
   if (landkode) {
     const iis = _.filter(institusjoner, (item) => {

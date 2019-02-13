@@ -1,14 +1,14 @@
 const family = [
   {
-    kode: 'GENERELL',
+    kode: 'GEN',
     term: 'Generell',
   },
   {
-    kode: 'BARNETRYGD',
+    kode: 'BAR',
     term: 'Barnetrygd',
   },
   {
-    kode: 'KONTANTSTOTTE',
+    kode: 'KON',
     term: 'Kontantstøtte',
   },
 ];
