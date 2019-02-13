@@ -16,5 +16,5 @@ module.exports.saksliste = (req, res) => {
   const tema = req.query.tema;
   const fagsaker = lesFagsaker(fnr, sektor);
 
-  res.json(_.filter(fagsaker, (fagsak) => fagsak.tema.kode === tema));
+  res.json(_.filter(fagsaker, (fagsak) => fagsak.temakode === tema));
 };

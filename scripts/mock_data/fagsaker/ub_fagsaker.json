@@ -2,10 +2,7 @@
   {
     "saksID": "34243232223",
     "sakstype": "Dagpenger",
-    "tema": {
-      "kode": "DAG",
-      "term": "Dagpenger"
-    },
+    "temakode": "DAG",
     "fagsystem": "Arena",
     "opprettet": "2018-10-15",
     "status": "Avsluttet"
@@ -13,10 +10,7 @@
   {
     "saksID": "a2873465",
     "sakstype": "Generell",
-    "tema": {
-      "kode": "GEN",
-      "term": "Generell"
-    },
+    "temakode": "GEN",
     "fagsystem": "Gosys",
     "opprettet": "2018-10-15",
     "status": "Ikke påbegynt"
