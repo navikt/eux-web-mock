@@ -12,7 +12,6 @@ const kodeverk = {
   familierelasjoner,
   kjoenn,
   kodemaps,
-  landkoder,
   sedtyper,
   sektor,
 };
