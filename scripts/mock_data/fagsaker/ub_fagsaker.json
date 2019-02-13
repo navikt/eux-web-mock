@@ -1,6 +1,6 @@
 [
   {
-    "saksid": "34243232223",
+    "saksID": "34243232223",
     "sakstype": "Dagpenger",
     "tema": {
       "kode": "DAG",
@@ -11,7 +11,7 @@
     "status": "Avsluttet"
   },
   {
-    "saksid": "a2873465",
+    "saksID": "a2873465",
     "sakstype": "Generell",
     "tema": {
       "kode": "GEN",

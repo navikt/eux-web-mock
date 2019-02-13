@@ -1,6 +1,6 @@
 [
   {
-    "saksid": "7865457854345",
+    "saksID": "7865457854345",
     "sakstype": "Barnetrygd",
     "tema": {
       "kode": "BAR",
@@ -11,7 +11,7 @@
     "status": "Ikke påbegynt"
   },
   {
-    "saksid": "73465",
+    "saksID": "73465",
     "sakstype": "Generell",
     "tema": {
       "kode": "GEN",
@@ -22,7 +22,7 @@
     "status": "Mottatt"
   },
   {
-  "saksid": "7865457854366",
+  "saksID": "7865457854366",
   "sakstype": "Kontantstøtte",
   "tema": {
     "kode": "KON",
