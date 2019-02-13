@@ -8,7 +8,8 @@ const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 const Institusjoner = require('./modules/institusjoner');
 const Fagsaker = require('./modules/fagsaker');
-
+const Arbeidsgivere = require('./modules/arbeidsgivere');
+const Landkoder = require('./modules/landkoder');
 const app = express();
 
 const allowCrossDomain = (req, res, next)  => {
@@ -25,6 +26,12 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
+router.get('/landkoder/:buctype', Landkoder.hent);
+
+/**
+ * ARBEIDSGIVERE
+ */
+router.get('/arbeidsgivere/:fnr', Arbeidsgivere.hent);
 /**
  * SAKSBEHANDLER
  */
@@ -42,7 +49,7 @@ router.get('/personer/andre', Personer.hentAndre);
  */
 router.get('/kodeverk/:kode?', Kodeverk.hent);
 
-router.get('/institusjoner/:buctype?', Institusjoner.hent);
+router.get('/institusjoner/:buctype/', Institusjoner.hent);
 
 router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 /**

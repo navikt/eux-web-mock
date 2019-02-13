@@ -1,7 +1,6 @@
 const fs = require('fs');
 const _ = require('underscore');
 
-
 const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
 const FAGSAKER_MOCK_DATA_DIR = `${MOCK_DATA_DIR}/fagsaker`;
 
@@ -17,5 +16,5 @@ module.exports.saksliste = (req, res) => {
   const tema = req.query.tema;
   const fagsaker = lesFagsaker(fnr, sektor);
 
-  res.json(_.filter(fagsaker, (fagsak) => fagsak.tema.kode === tema));
+  res.json(_.filter(fagsaker, (fagsak) => fagsak.temakode === tema));
 };

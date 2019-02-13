@@ -3,7 +3,6 @@ const { buctyper } = require('./buctyper');
 const { familierelasjoner } = require('./familierelasjoner');
 const { kjoenn } = require('./kjoenn');
 const { kodemaps } = require('./kodemaps');
-const { landkoder } = require('./landkoder');
 const { sedtyper } = require('./sedtyper');
 const { sektor } = require('./sektor');
 
@@ -13,7 +12,6 @@ const kodeverk = {
   familierelasjoner,
   kjoenn,
   kodemaps,
-  landkoder,
   sedtyper,
   sektor,
 };

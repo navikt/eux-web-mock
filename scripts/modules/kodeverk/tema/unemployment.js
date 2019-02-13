@@ -1,11 +1,11 @@
 const unemployment = [
 
   {
-    kode: 'GENERELL',
+    kode: 'GEN',
     term: 'Generell',
   },
   {
-    kode: 'DAGPENGER',
+    kode: 'DAG',
     term: 'Dagpenger',
   },
 ];
