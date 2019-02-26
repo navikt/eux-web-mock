@@ -1,5 +1,6 @@
 [
   {
+    "arbeidsforholdIDnav" : 44138101,
     "orgnr": "982683955",
     "navn": "EXPERIS AS",
     "ansettelsesPeriode": {
@@ -8,6 +9,7 @@
     }
   },
   {
+    "arbeidsforholdIDnav" : 45138102,
     "orgnr": "943049467",
     "navn": "SKANSKA NORGE AS",
     "ansettelsesPeriode": {
@@ -16,6 +18,7 @@
     }
   },
   {
+    "arbeidsforholdIDnav" : 46138103,
     "orgnr": "810072512",
     "navn": "EIKEN OG TORSKEN",
     "ansettelsesPeriode": {
