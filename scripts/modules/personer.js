@@ -1,5 +1,6 @@
 const fs = require('fs');
 const URL = require('url');
+const _ = require('underscore');
 
 const Schema = require('../test/schema-util');
 const ERR = require('./errors');
@@ -16,9 +17,14 @@ module.exports.lesPersonKatalog = () => {
 };
 
 module.exports.hent = (req, res) => {
+  const url = URL.parse(req.url);
   const fnr = req.query.fnr;
   if (fnr && fnr.length === 11) {
     const person = lesPerson(fnr);
+    if (_.isEmpty(person)) {
+      const melding = ERR.notFound404(url.pathname, 'Person med fnr IKKE funnet');
+      return res.status(404).send(melding);
+    }
     return res.json(person);
   }
   let message = '';
@@ -29,7 +35,6 @@ module.exports.hent = (req, res) => {
     message = 'Fnr må ha 11 siffer';
   }
 
-  const url = URL.parse(req.url);
   const melding = ERR.badRequest400(url.pathname, message);
   return res.status(400).send(melding);
   /*
@@ -40,9 +45,14 @@ module.exports.hent = (req, res) => {
 };
 
 module.exports.hentAndre = (req, res) => {
+  const url = URL.parse(req.url);
   const fnr = req.query.fnr;
   if (fnr && fnr.length === 11) {
     const person = lesPerson(fnr);
+    if (_.isEmpty(person)) {
+      const melding = ERR.notFound404(url.pathname, 'Person med fnr IKKE funnet');
+      return res.status(404).send(melding);
+    }
     const andre = _.pick(person, 'fnr', 'fdato', 'fornavn', 'etternavn', 'kjoenn');
     return res.json(andre);
   }
@@ -54,7 +64,7 @@ module.exports.hentAndre = (req, res) => {
     message = 'Fnr må ha 11 siffer';
   }
 
-  const url = URL.parse(req.url);
+
   const melding = ERR.badRequest400(url.pathname, message);
   return res.status(400).send(melding);
 };
