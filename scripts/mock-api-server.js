@@ -1,9 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const serverinfo = require('./modules/server-info');
+const Serverinfo = require('./modules/server-info');
 const Kodeverk = require('./modules/kodeverk');
-const saksbehandler = require('./modules/saksbehandler');
+const Saksbehandler = require('./modules/saksbehandler');
+const Personer = require('./modules/personer');
+const Rina = require('./modules/rina');
+const Institusjoner = require('./modules/institusjoner');
+const Fagsaker = require('./modules/fagsaker');
+const Arbeidsforhold = require('./modules/arbeidsforhold');
+const Landkoder = require('./modules/landkoder');
 const app = express();
 
 const allowCrossDomain = (req, res, next)  => {
@@ -20,17 +26,58 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
+router.get('/landkoder/:buctype', Landkoder.hent);
+
+/**
+ * ARBEIDSFORHOLD
+ */
+router.get('/arbeidsforhold/:fnr', Arbeidsforhold.hent);
 /**
  * SAKSBEHANDLER
  */
-router.get('/saksbehandler', saksbehandler.hent);
+router.get('/saksbehandler', Saksbehandler.hent);
+
+/**
+ * PERSON
+ * ---------------------------------------------------------------
+ */
+router.get('/personer', Personer.hent);
+router.get('/personer/andre', Personer.hentAndre);
 
 /**
  * KODEVERK
  */
-router.get('/kodeverk', Kodeverk.hent);
+router.get('/kodeverk/:kode?', Kodeverk.hent);
+
+router.get('/institusjoner/:buctype/', Institusjoner.hent);
+
+router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
+/**
+ * RINA
+ */
+router.post('/rina/sak', Rina.sendSak);
+router.post('/rina/vedlegg', Rina.sendVedlegg);
+// ?rinasaksnummer=12334566
+router.get('/rina/dokumenter/', Rina.hentDokument);
+/*
+
+
+//Kun tall
+rinasaksnummer = 161007 => {
+kode: SED_F001,
+rinadokumentID: 760c632d67da4bc, // UUID
+},
+rinasaksnummer = 268016 => [{}],
+
+router.get('/rina/dokumenter/?rinasaksnummer', Rinasak.hent);
+[{
+  kode: 'SED_F001',
+  rinadokumentID: 760c632d67da4bc, // UUID
+}]
+=
+ */
 app.use(allowCrossDomain);
 app.use('/api', router);
 
 app.listen(port);
-console.log('Test EUX mock API server running on http://'+serverinfo.getIpAdress()+':' + port+'/api');
+console.log('Test EUX mock API server running on http://'+Serverinfo.getIpAdress()+':' + port+'/api');

@@ -1,0 +1,26 @@
+[
+  {
+    "saksID": "7865457854345",
+    "sakstype": "Barnetrygd",
+    "temakode": "BAR",
+    "fagsystem": "Infotrygd",
+    "opprettet": "2018-10-15",
+    "status": "Ikke påbegynt"
+  },
+  {
+    "saksID": "73465",
+    "sakstype": "Generell",
+    "temakode": "GEN",
+    "fagsystem": "Gosys",
+    "opprettet": "2018-10-15",
+    "status": "Mottatt"
+  },
+  {
+  "saksID": "7865457854366",
+  "sakstype": "Kontantstøtte",
+  "temakode": "KON",
+  "fagsystem": "Infotrygd",
+  "opprettet": "2018-10-15",
+  "status": "Ikke påbegynt"
+  }
+]

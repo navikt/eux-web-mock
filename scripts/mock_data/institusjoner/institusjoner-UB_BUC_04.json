@@ -1,0 +1,548 @@
+[
+  {
+    "institusjonsID": "CH:ALLBUCs",
+    "navn": "001_ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:ALLBUCsb",
+    "navn": "001_ALL_BUCsb",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:ALVALK",
+    "navn": "042_ALV_ALK",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:ALVALKb",
+    "navn": "042_ALV_ALKb",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:BITTest01",
+    "navn": "090_BIT_Test01",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:BITTest02",
+    "navn": "090_BIT_Test02",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:TSCLEISS00",
+    "navn": "CENTRE DES LIAISONS EUROPÉENNES ET INTERNATIONALES DE SÉCURITÉ SOCIALE",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:CIN0000001",
+    "navn": "CNAV RINA MUTU1",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:CIN0000002",
+    "navn": "CNAV RINA MUTU2",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "HR:3001",
+    "navn": "CROATIAN EMPLOYMENT SERVICE",
+    "landkode": "HR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BA07319",
+    "navn": "Employment Agency Chemnitz Reimbursements Cross-Border Workers on Behalf of the Headquarters",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:TEST97103",
+    "navn": "Employment Agency Hinmeis",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LU:0053",
+    "navn": "Employment Office",
+    "landkode": "LU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:TSRG75V001",
+    "navn": "FR RINA DISTRIBUTED",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:TSRG75V000",
+    "navn": "FR RINA MUTUALIZED",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:TSRG75V002",
+    "navn": "FR RINA MUTUALIZED 2",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:CLEISS0001",
+    "navn": "FRENCH LIAISON BODY",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH003",
+    "navn": "FSIO3",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH004",
+    "navn": "FSIO4",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BA01110",
+    "navn": "Federal Employment Agency Headquarters",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LT:188735972",
+    "navn": "Foreign benefits office",
+    "landkode": "LT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BATestCI01",
+    "navn": "General Federal Employment Agency, Test institution 01",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BATestCI05",
+    "navn": "General Federal Employment Agency, Test institution 05",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BATestCI02",
+    "navn": "General Federal Employment Agency, Test institution 2",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "DE:BATestCI04",
+    "navn": "General Federal Employment Agency, Test institution 4",
+    "landkode": "DE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PT:PTIITST01",
+    "navn": "II,IP, Test Institution 01",
+    "landkode": "PT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PT:PTIITST02",
+    "navn": "II,IP, Test Institution 02",
+    "landkode": "PT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PT:PTISSTST01",
+    "navn": "ISS,IP, Test Institution 01",
+    "landkode": "PT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NL:NL2000CP",
+    "navn": "Institute for Employee Benefit Schemes;Uitvoeringsinstituut Werknemersverzekeringen;",
+    "landkode": "NL",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NL:NL2000",
+    "navn": "Institute for Employee Benefit Schemes;Uitvoeringsinstituut Werknemersverzekeringen;",
+    "landkode": "NL",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PT:1002",
+    "navn": "Institute of Social Security, International Coordination Unit",
+    "landkode": "PT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LI:10002",
+    "navn": "Institution 02",
+    "landkode": "LI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LI:10003",
+    "navn": "Institution 03",
+    "landkode": "LI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PL:PL000001",
+    "navn": "Ministry of Family, Labour and Social Policy",
+    "landkode": "PL",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "HU:3001",
+    "navn": "Ministry of Finance",
+    "landkode": "HU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NO:NAVT007",
+    "navn": "NAV Test 07",
+    "landkode": "NO",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NO:NAVT008",
+    "navn": "NAV Test 08",
+    "landkode": "NO",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NO:NAVT002",
+    "navn": "NAVT002",
+    "landkode": "NO",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "NO:NAVT003",
+    "navn": "NAVT003",
+    "landkode": "NO",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:RG75V00002",
+    "navn": "National 2 - Age Insurance Fund",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "PL:CA19",
+    "navn": "National Health Fund - Headquarters",
+    "landkode": "PL",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:RG75V00000",
+    "navn": "National old - Age Insurance fund",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LI:LI20041",
+    "navn": "Office of Economic Affairs 1",
+    "landkode": "LI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LI:LI20042",
+    "navn": "Office of Economic Affairs 2",
+    "landkode": "LI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:PE10000001",
+    "navn": "POLE EMPLOI SERVICES",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FR:TSPE100001",
+    "navn": "POLE EMPLOI SERVICES TEST",
+    "landkode": "FR",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "BE:RINA4demo",
+    "navn": "RINA4 demo",
+    "landkode": "BE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SOCPOIST",
+    "navn": "SIA HQ",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTEST01",
+    "navn": "SIA Test01",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTEST02",
+    "navn": "SIA Test02",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTEST03",
+    "navn": "SIA Test03",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTEST04",
+    "navn": "SIA Test04",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CY:SIS1146505",
+    "navn": "SOCIAL INSURANCE SERVICES",
+    "landkode": "CY",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:RASP",
+    "navn": "Social Insurance Agency Routing Application",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:100100",
+    "navn": "Social Insurance Agency, headquarters",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LV:0002",
+    "navn": "State Social Insurance Agency T1",
+    "landkode": "LV",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LV:0003",
+    "navn": "State Social Insurance Agency T2",
+    "landkode": "LV",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0100BUC",
+    "navn": "TEST 0100 ALL BUC",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FI:0299000003",
+    "navn": "TEST_AP testing 3",
+    "landkode": "FI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FI:0299000004",
+    "navn": "TEST_AP testing 4",
+    "landkode": "FI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FI:0199000005",
+    "navn": "TEST_AP testing 5",
+    "landkode": "FI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FI:0100222222",
+    "navn": "TEST_The Social Insurance Institution of Finland",
+    "landkode": "FI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "FI:5556666666",
+    "navn": "TEST_foreign country",
+    "landkode": "FI",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "EE:TN70001975",
+    "navn": "TNEstonian Social Insurance Board",
+    "landkode": "EE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "EE:TN70000349",
+    "navn": "TNEstonian Tax and Customs Board",
+    "landkode": "EE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "EE:TN74000085",
+    "navn": "TNEstonian Unemployment Insurance Fund",
+    "landkode": "EE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTRN01",
+    "navn": "TRN_Social Insurance Agency_01",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTRN02",
+    "navn": "TRN_Social Insurance Agency_02",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTRN03",
+    "navn": "TRN_Social Insurance Agency_03",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "SK:SPTRN04",
+    "navn": "TRN_Social Insurance Agency_04",
+    "landkode": "SK",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "EE:TS74000085",
+    "navn": "TSEstonian Unemployment Insurance Fund",
+    "landkode": "EE",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0101BUC",
+    "navn": "Test 01 ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0143SE2",
+    "navn": "Test 01 ALV RI",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH01011BUC",
+    "navn": "Test 011 ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH01431SE2",
+    "navn": "Test 011 ALV RI",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0201BUC",
+    "navn": "Test 02 ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0243SE2",
+    "navn": "Test 02 ALV RI",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0490BIT",
+    "navn": "Test 0490BIT ALL_BUCs EN",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0491BIT",
+    "navn": "Test 0491BIT ALL_BUCs EN",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0492BIT",
+    "navn": "Test 0492BIT ALL_BUCs EN",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH05011BUC",
+    "navn": "Test 05 ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH005",
+    "navn": "Test 05 ALL_BUCs",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH05431SE2",
+    "navn": "Test 05 ALV RI",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0543SE2",
+    "navn": "Test 05 ALV RI",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "CH:CH0500BUC",
+    "navn": "Test 0500 ALL BUC English",
+    "landkode": "CH",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LU:0201",
+    "navn": "Test 1",
+    "landkode": "LU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LU:0202",
+    "navn": "Test 2",
+    "landkode": "LU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LU:0203",
+    "navn": "Test 3",
+    "landkode": "LU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LU:0204",
+    "navn": "Test 4",
+    "landkode": "LU",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "LT:193322893",
+    "navn": "Utenos division",
+    "landkode": "LT",
+    "buctype": "UB_BUC_04"
+  },
+  {
+    "institusjonsID": "BE:rina3",
+    "navn": "rina3",
+    "landkode": "BE",
+    "buctype": "UB_BUC_04"
+  }
+]

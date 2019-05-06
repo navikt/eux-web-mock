@@ -1,29 +1,32 @@
-const { landkoder } = require('./landkoder');
-const { sakstyper } = require('./sakstyper');
-const { behandlingstyper } = require('./behandlingstyper');
-const { behandlingsstatus } = require('./behandlingsstatus');
-const { dokumentkategorier } = require('./dokumentkategorier');
-const { oppgavetyper } = require('./oppgavetyper');
-const { vedleggstitler } = require('./vedleggstitler');
-const { dokumenttitler } = require('./dokumenttitler');
+const { tema } = require('./tema');
+const { buctyper } = require('./buctyper');
+const { familierelasjoner } = require('./familierelasjoner');
+const { kjoenn } = require('./kjoenn');
+const { kodemaps } = require('./kodemaps');
+const { sedtyper } = require('./sedtyper');
+const { sektor } = require('./sektor');
 
 const kodeverk = {
-  landkoder,
-  sakstyper,
-  behandlingstyper,
-  behandlingsstatus,
-  oppgavetyper,
-  vedleggstitler,
-  dokumenttitler,
-  dokumentkategorier,
+  tema,
+  buctyper,
+  familierelasjoner,
+  kjoenn,
+  kodemaps,
+  sedtyper,
+  sektor,
 };
-exports.kodeverk = kodeverk;
+module.exports.Kodeverk = kodeverk;
 
 /**
  * Hent kodeverk
  * @param req
  * @param res
  */
-exports.hent = (req, res) => {
+module.exports.hent = (req, res) => {
+  const kode = req.params.kode;
+  if (kode) {
+    res.json(kodeverk[kode]);
+    return;
+  }
   res.json(kodeverk);
 };
