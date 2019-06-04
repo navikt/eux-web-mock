@@ -26,6 +26,8 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
+router.get('/serverinfo', Serverinfo.hentServerInfo);
+
 router.get('/landkoder/:buctype', Landkoder.hent);
 
 /**
