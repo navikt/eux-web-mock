@@ -33,13 +33,14 @@ if (branchName === 'unknown') {
   branchName = branch.sync(process.cwd());
 }
 const gosysURL = 'https://wasapp-t8.adeo.no/gosys/';
-
+const veraURL = 'https://vera.adeo.no/#/log?application=eux';
 const serverInfo = {
   namespace,
   cluster,
   branchName,
   longVersionHash,
   gosysURL,
+  veraURL,
 };
 
 module.exports.hentServerInfo = (req, res) => {
