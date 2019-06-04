@@ -1,26 +1,32 @@
 [
   {
     "saksID": "7865457854345",
-    "sakstype": "Barnetrygd",
     "temakode": "BAR",
-    "fagsystem": "Infotrygd",
-    "opprettet": "2018-10-15",
-    "status": "Ikke påbegynt"
+    "fagsystem": "IT01",
+    "aktoerId": "1350969741332",
+    "orgnr": null,
+    "fagsakNr": "1445A01",
+    "opprettetTidspunkt": "2018-10-15",
+    "opprettetAv": "srvRuting"
   },
   {
     "saksID": "73465",
-    "sakstype": "Generell",
     "temakode": "GEN",
     "fagsystem": "Gosys",
-    "opprettet": "2018-10-15",
-    "status": "Mottatt"
+    "aktoerId": "1350969741332",
+    "orgnr": null,
+    "fagsakNr": "1445A01",
+    "opprettetTidspunkt": "2018-10-15",
+    "opprettetAv": "srvRuting"
   },
   {
-  "saksID": "7865457854366",
-  "sakstype": "Kontantstøtte",
-  "temakode": "KON",
-  "fagsystem": "Infotrygd",
-  "opprettet": "2018-10-15",
-  "status": "Ikke påbegynt"
+    "saksID": "7865457854366",
+    "temakode": "KON",
+    "fagsystem": "IT01",
+    "aktoerId": "1350969741332",
+    "orgnr": null,
+    "fagsakNr": "1445A01",
+    "opprettetTidspunkt": "2018-10-15",
+    "opprettetAv": "srvRuting"
   }
 ]
