@@ -1,8 +1,8 @@
 const Mock = require('../utils/mock-util');
-const SchemaValidator  = require('../utils/schemavalidator');
+const SchemaValidator = require('../utils/schemavalidator');
 const Katalog = require('../katalog');
 
-const { moduleName } = Katalog.pathnameMap['fagsaker'];
+const { moduleName } = Katalog.pathnameMap.fagsaker;
 
 module.exports.saksliste = async (req, res) => {
   const { fnr } = req.params;
@@ -16,5 +16,5 @@ module.exports.saksliste = async (req, res) => {
   const pathObject = {
     pathname: `${sektor}_fagsaker`,
   };
-  return SchemaValidator.get(moduleName, req, res, pathObject );
+  return SchemaValidator.get(moduleName, req, res, pathObject);
 };

@@ -23,9 +23,7 @@ module.exports.hent = async (req, res) => {
   try {
     const saksbehandlere = await lesSaksbehandlere();
     res.json(_.sample(saksbehandlere));
-  }
-  catch (err) {
-   Mock.serverError(req, res, err);
+  } catch (err) {
+    Mock.serverError(req, res, err);
   }
 };
-
