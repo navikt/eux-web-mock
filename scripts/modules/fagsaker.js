@@ -1,20 +1,20 @@
-const fs = require('fs');
-const _ = require('underscore');
+const Mock = require('../utils/mock-util');
+const SchemaValidator  = require('../utils/schemavalidator');
+const Katalog = require('../katalog');
 
-const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
-const FAGSAKER_MOCK_DATA_DIR = `${MOCK_DATA_DIR}/fagsaker`;
+const { moduleName } = Katalog.pathnameMap['fagsaker'];
 
-
-const lesFagsaker = (fnr, sektor) => {
-  const mockfile = `${FAGSAKER_MOCK_DATA_DIR}/${sektor.toLowerCase()}_fagsaker.json`;
-  return fs.existsSync(mockfile) ? JSON.parse(fs.readFileSync(mockfile, "utf8")) : {};
-};
-
-module.exports.saksliste = (req, res) => {
-  const fnr = req.params.fnr;
-  const sektor = req.query.sektor;
-  const tema = req.query.tema;
-  const fagsaker = lesFagsaker(fnr, sektor);
-
-  res.json(_.filter(fagsaker, (fagsak) => fagsak.temakode === tema));
+module.exports.saksliste = async (req, res) => {
+  const { fnr } = req.params;
+  if (!fnr) {
+    return Mock.manglerParamFnr(req, res);
+  }
+  const { sektor } = req.query;
+  if (!sektor) {
+    return Mock.manglerParamSektor(req, res);
+  }
+  const pathObject = {
+    pathname: `${sektor}_fagsaker`,
+  };
+  return SchemaValidator.get(moduleName, req, res, pathObject );
 };

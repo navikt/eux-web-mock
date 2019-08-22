@@ -1,9 +1,12 @@
 const os = require('os');
-const _ = require('underscore');
+const _ = require('lodash');
+const moment = require('moment');
 const branch = require('git-branch');
 const shell = require('shelljs');
 
-function platformNIC() {
+moment.locale('nb');
+
+const platformNIC = () => {
   const interfaces = os.networkInterfaces();
   switch (process.platform) {
     case 'darwin':
@@ -11,16 +14,14 @@ function platformNIC() {
     case 'linux':
       return interfaces.ens192 ? interfaces.ens192 : interfaces.eno16780032;
     default: // win32
-      return interfaces.Ethernet0
+      return interfaces.Ethernet0 ? interfaces.Ethernet0 : interfaces['Wi-Fi'];
   }
-}
+};
 
 
 module.exports.getIpAdress = () => {
   const nic = platformNIC();
-  const ipv4 = _.find(nic, function(item){
-    return item.family === 'IPv4';
-  });
+  const ipv4 = _.find(nic, (item) => (item.family === 'IPv4'));
   return ipv4.address;
 };
 
@@ -43,6 +44,4 @@ const serverInfo = {
   veraURL,
 };
 
-module.exports.hentServerInfo = (req, res) => {
-  res.json(serverInfo)
-};
+module.exports.hentServerInfo = (req, res) => res.json(serverInfo);
