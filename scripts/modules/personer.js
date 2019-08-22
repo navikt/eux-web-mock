@@ -13,13 +13,13 @@ module.exports.hent = async (req, res) => {
   if (!fnr) {
     return Mock.manglerParamFnr(req, res);
   }
-  else if (fnr.length !== 11) {
-    return Mock.badRequestParam(req, res, 'Fnr må ha 11 siffer')
+  if (fnr.length !== 11) {
+    return Mock.badRequestParam(req, res, 'Fnr må ha 11 siffer');
   }
   const { moduleName } = Katalog.pathnameMap.personer;
   const mockpathObject = {
     pathname: 'fnr-:fnrdnr',
-    params: {fnrdnr: fnr}
+    params: { fnrdnr: fnr },
   };
-  SchemaValidator.get(moduleName, req, res, mockpathObject);
+  return SchemaValidator.get(moduleName, req, res, mockpathObject);
 };

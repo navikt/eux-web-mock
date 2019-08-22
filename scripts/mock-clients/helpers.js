@@ -1,7 +1,7 @@
 const colors = require('colors');
 const axios = require('axios');
 
-const { API_BASE_URL}  = require('../../mock.config');
+const { API_BASE_URL } = require('../../mock.config');
 
 module.exports.httpClient = () => {
   axios.defaults.crossdomain = true;
@@ -16,18 +16,18 @@ module.exports.httpClient = () => {
   });
 };
 
-module.exports.printheader = method => {
+module.exports.printheader = (method) => {
   console.log('\n');
   console.log('=======================================================');
   console.log(`[${method.toUpperCase()}] Mock client`);
-  console.log("-------------------------------------------------------");
+  console.log('-------------------------------------------------------');
 };
 
 module.exports.printresult = (res) => {
-  const { method, url} = res.config;
+  const { method, url } = res.config;
   console.log(`[${method.toUpperCase()}]`, url);
   console.log(res.status, res.statusText);
-  console.log("-------------------------------------------------------\n");
+  console.log('-------------------------------------------------------\n');
 };
 
 module.exports.printerror = (res) => {
@@ -39,12 +39,12 @@ module.exports.printerror = (res) => {
   console.error(`[${method.toUpperCase()}]`, path);
   console.error(colors.bgRed(`${status} ${statusText}`));
   console.error(message);
-  console.error("-------------------------------------------------------\n");
+  console.error('-------------------------------------------------------\n');
 };
 
 module.exports.printoppsummering = (oppsummering, method) => {
   console.log(`[${method.toUpperCase()}]`, colors.green(`yarn mock:${method.toLowerCase()}`));
   const successText = `Success: ${colors.green(oppsummering.success)}`;
-  let failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}`: `Failure: ${colors.white(oppsummering.failure)}`;
+  const failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}`: `Failure: ${colors.white(oppsummering.failure)}`;
   console.log(`{ ${successText}, ${failureText} }`);
 };

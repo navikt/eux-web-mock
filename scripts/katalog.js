@@ -25,7 +25,7 @@ const pathnameMap = {
   personer: {
     moduleName: 'personer',
     get: {
-      pathname: '/personer/?fnr=70057418034'
+      pathname: '/personer/?fnr=70057418034',
     },
   },
   saksbehandler: {
