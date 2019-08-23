@@ -1,12 +1,12 @@
-const fs = require('fs');
 const _ = require('underscore');
+const { MOCK_DATA_DIR } = require('../../mock.config');
+const Utils = require('../utils/utils');
 
-const MOCK_DATA_DIR = `${process.cwd()}/scripts/mock_data`;
 const INSTITUSJONER_MOCK_DATA_DIR = `${MOCK_DATA_DIR}/institusjoner`;
 
 const lesInstitusjoner = buctype => {
   const mockfile = `${INSTITUSJONER_MOCK_DATA_DIR}/institusjoner-${buctype.toUpperCase()}.json`;
-  return fs.existsSync(mockfile) ? JSON.parse(fs.readFileSync(mockfile, "utf8")) : [];
+  return Utils.readJsonAndParseAsync(mockfile);
 };
 module.exports.lesInstitusjoner = lesInstitusjoner;
 

@@ -7,7 +7,7 @@ const logging = require('./utils/logging');
 const Saksbehandler = require('./modules/saksbehandler');
 const Personer = require('./modules/personer');
 //TODO const Rina = require('./modules/rina');
-//TODO const Institusjoner = require('./modules/institusjoner');
+const Institusjoner = require('./modules/institusjoner');
 const Fagsaker = require('./modules/fagsaker');
 const Arbeidsforhold = require('./modules/arbeidsforhold');
 //TODO const Landkoder = require('./modules/landkoder');
@@ -67,7 +67,7 @@ router.get('/saksbehandler', Saksbehandler.hent);
 router.get('/personer', Personer.hent);
 // TODO router.get('/personer/andre', Personer.hentAndre);
 
-//TODO router.get('/institusjoner/:buctype/', Institusjoner.hent);
+router.get('/institusjoner/:buctype/', Institusjoner.hent);
 
 router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 /**

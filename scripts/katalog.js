@@ -13,15 +13,13 @@ const pathnameMap = {
       params: { fnr: '70057418034' },
     },
   },
-  /*
   institusjoner: {
     moduleName: 'institusjoner',
     get: {
-      pathname: '/institusjoner/:orgnr',
-      params: { orgnr: '810072512' },
+      pathname: '/institusjoner/:buctype/?landkode=DK',
+      params: { buctype: 'FB_BUC_01' },
     },
   },
-  */
   personer: {
     moduleName: 'personer',
     get: {
