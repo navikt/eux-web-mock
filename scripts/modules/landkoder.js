@@ -1,145 +1,33 @@
-const _ = require('underscore');
-
+const EKV = require('eessi-kodeverk');
 const Institusjoner = require('./institusjoner');
-const landkoder = [
-  {
-    kode: 'CH',
-    term: 'Sveits',
-  },
-  {
-    kode: 'BE',
-    term: 'Belgia',
-  },
-  {
-    kode: 'BG',
-    term: 'Bulgaria',
-  },
-  {
-    kode: 'DK',
-    term: 'Danmark',
-  },
-  {
-    kode: 'EE',
-    term: 'Estland',
-  },
-  {
-    kode: 'FI',
-    term: 'Finland',
-  },
-  {
-    kode: 'FR',
-    term: 'Frankrike',
-  },
-  {
-    kode: 'GR',
-    term: 'Hellas',
-  },
-  {
-    kode: 'IE',
-    term: 'Irland',
-  },
-  {
-    kode: 'IS',
-    term: 'Island',
-  },
-  {
-    kode: 'IT',
-    term: 'Italia',
-  },
-  {
-    kode: 'HR',
-    term: 'Kroatia',
-  },
-  {
-    kode: 'CY',
-    term: 'Kypros',
-  },
-  {
-    kode: 'LV',
-    term: 'Latvia',
-  },
-  {
-    kode: 'LI',
-    term: 'Liechtenstein',
-  },
-  {
-    kode: 'LT',
-    term: 'Litauen',
-  },
-  {
-    kode: 'LU',
-    term: 'Luxembourg',
-  },
-  {
-    kode: 'MT',
-    term: 'Malta',
-  },
-  {
-    kode: 'NL',
-    term: 'Nederland',
-  },
-  {
-    kode: 'NO',
-    term: 'Norge',
-  },
-  {
-    kode: 'PL',
-    term: 'Polen',
-  },
-  {
-    kode: 'PT',
-    term: 'Portugal',
-  },
-  {
-    kode: 'RO',
-    term: 'Romania',
-  },
-  {
-    kode: 'SK',
-    term: 'Slovakia',
-  },
-  {
-    kode: 'SI',
-    term: 'Slovenia',
-  },
-  {
-    kode: 'ES',
-    term: 'Spania',
-  },
-  {
-    kode: 'GB',
-    term: 'Storbritannia',
-  },
-  {
-    kode: 'SE',
-    term: 'Sverige',
-  },
-  {
-    kode: 'DE',
-    term: 'Tyskland',
-  },
-  {
-    kode: 'HU',
-    term: 'Ungarn',
-  },
-  {
-    kode: 'AT',
-    term: 'Østerrike',
-  },
-];
 
-const filtrerteLandKoder = buctype => {
-  const institusjoner = Institusjoner.lesInstitusjoner(buctype);
-  const land_med_institusjoner = _.uniq(_.map(institusjoner, 'landkode')).sort();
-  return _.filter(landkoder, (land) => _.contains(land_med_institusjoner, land.kode));
+// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_uniq
+const uniq = (array) => [...new Set(array)];
+// const sortBy = (key) => (a,b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
+
+const filtrerteLandKoder = async (buctype) => {
+  const institusjoner = await Institusjoner.lesInstitusjoner(buctype);
+  const landMedInstitusjoner = uniq(institusjoner.map((item) => item.landkode)).sort();
+
+  const { landkoder } = EKV.KTObjects;
+  // const sorterte_landkoder = landkoder.sort(sortBy('kode'));
+  return landkoder.filter((landkode) => landMedInstitusjoner.includes(landkode.kode));
 };
 
-const strcmpAscending = (a, b) => (a.term > b.term ? 1 : b.term > a.term ? -1 : 0);
-//const lkoder = filtrerteLandKoder('FB_BUC_01');
-//console.log(lkoder.sort((a,b) => strcmpAscending(a,b)));
-
-module.exports.hent = (req, res) => {
-  const buctype = req.params.buctype;
-  const landkoder = filtrerteLandKoder(buctype);
-  res.json(landkoder.sort((a,b) => strcmpAscending(a,b)));
+module.exports.hent = async (req, res) => {
+  const { buctype } = req.params;
+  const { landkode } = req.query;
+  try {
+    const landkoder = await filtrerteLandKoder(buctype);
+    if (landkode) {
+      const land = landkoder.find((item) => item.kode === landkode);
+      if (land) {
+        const response = [land];
+        return res.json(response);
+      }
+    }
+    return res.json(landkoder);
+  } catch (e) {
+    return res.status(500).send(e);
+  }
 };
