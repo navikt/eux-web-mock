@@ -6,8 +6,15 @@ const pathnameMap = {
       params: { fnr: '70057418034' },
     },
   },
-  fagsaker: {
-    moduleName: 'fagsaker',
+  fagsaker_fb: {
+    moduleName: 'fagsaker_fb',
+    get: {
+      pathname: '/fagsaker/:fnr/?sektor=fb',
+      params: { fnr: '70057418034' },
+    },
+  },
+  fagsaker_ub: {
+    moduleName: 'fagsaker_ub',
     get: {
       pathname: '/fagsaker/:fnr/?sektor=ub',
       params: { fnr: '70057418034' },
@@ -24,6 +31,24 @@ const pathnameMap = {
     moduleName: 'personer',
     get: {
       pathname: '/personer/?fnr=70057418034',
+    },
+  },
+  'rina-dokumenter': {
+    moduleName: 'rina-dokumenter',
+    get: {
+      pathname: '/rina/dokumenter/?rinasaksnummer=161007',
+    },
+  },
+  'rina-sak': {
+    moduleName: 'rina-sak',
+    post: {
+      pathname: '/rina/sak',
+    },
+  },
+  'rina-vedlegg': {
+    moduleName: 'rina-vedlegg',
+    post: {
+      pathname: '/rina/vedlegg',
     },
   },
   saksbehandler: {

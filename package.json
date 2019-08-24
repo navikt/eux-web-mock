@@ -27,7 +27,7 @@
   },
   "scripts": {
     "happycase": "node scripts/mock-api-server.js",
-    "happycase:dbg": "node %NODE_DEBUG_OPTION% scripts/mock-api-server.js",
+    "happycase:dbg": "node $NODE_DEBUG_OPTION scripts/mock-api-server.js",
     "amock": "node scripts/mock_api_server.js",
     "mock:get": "node scripts/mock-clients/get-mock-client",
     "mock:put": "node scripts/mock-clients/put-mock-client",

@@ -2,7 +2,8 @@ const Mock = require('../utils/mock-util');
 const SchemaValidator = require('../utils/schemavalidator');
 const Katalog = require('../katalog');
 
-const { moduleName } = Katalog.pathnameMap.fagsaker;
+const { moduleName: ffb } = Katalog.pathnameMap.fagsaker_fb;
+const { moduleName: fub } = Katalog.pathnameMap.fagsaker_ub;
 
 module.exports.saksliste = async (req, res) => {
   const { fnr } = req.params;
@@ -13,8 +14,7 @@ module.exports.saksliste = async (req, res) => {
   if (!sektor) {
     return Mock.manglerParamSektor(req, res);
   }
-  const pathObject = {
-    pathname: `${sektor}_fagsaker`,
-  };
-  return SchemaValidator.get(moduleName, req, res, pathObject);
+
+  const module = (sektor === ffb) ? ffb : fub;
+  return SchemaValidator.get(module, req, res);
 };

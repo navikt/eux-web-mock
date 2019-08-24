@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 
 const Serverinfo = require('./utils/server-info');
 const logging = require('./utils/logging');
-const Saksbehandler = require('./modules/saksbehandler');
-const Personer = require('./modules/personer');
-//TODO const Rina = require('./modules/rina');
-const Institusjoner = require('./modules/institusjoner');
-const Fagsaker = require('./modules/fagsaker');
+
 const Arbeidsforhold = require('./modules/arbeidsforhold');
-//TODO const Landkoder = require('./modules/landkoder');
+const Fagsaker = require('./modules/fagsaker');
+const Institusjoner = require('./modules/institusjoner');
+const Landkoder = require('./modules/landkoder');
+const Personer = require('./modules/personer');
+const Rina = require('./modules/rina');
+const Saksbehandler = require('./modules/saksbehandler');
 
 const createLogDirIfnotExists = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir);
 const LOGDIR = `${process.cwd()}/logdir`;
@@ -54,7 +55,7 @@ router.post('/logger/error', logging.error);
  * ARBEIDSFORHOLD
  */
 router.get('/arbeidsforhold/:fnr', Arbeidsforhold.hent);
-//TODO router.get('/landkoder/:buctype', Landkoder.hent);
+router.get('/landkoder/:buctype', Landkoder.hent);
 /**
  * SAKSBEHANDLER
  */
@@ -73,10 +74,10 @@ router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 /**
  * RINA
  */
-//TODO router.post('/rina/sak', Rina.sendSak);
-//TODO router.post('/rina/vedlegg', Rina.sendVedlegg);
+router.post('/rina/sak', Rina.sak.sendSak);
+router.post('/rina/vedlegg', Rina.vedlegg.sendVedlegg);
 // ?rinasaksnummer=12334566
-//TODO router.get('/rina/dokumenter/', Rina.hentDokument);
+router.get('/rina/dokumenter/', Rina.dokumenter.hentDokument);
 /*
 //Kun tall
 rinasaksnummer = 161007 => {

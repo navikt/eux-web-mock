@@ -1,3 +1,4 @@
+const Mock = require('../utils/mock-util');
 const Katalog = require('../katalog');
 const SchemaValidator = require('../utils/schemavalidator');
 

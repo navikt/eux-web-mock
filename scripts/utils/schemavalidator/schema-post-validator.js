@@ -4,13 +4,17 @@ const Utils = require('../utils');
 const { valideringFeil, test } = require('./helper');
 
 const jsBody = (body) => (Utils.isJSON(body) ? JSON.parse(body) : body);
-
+const extractPostBody = (req) => {
+  const { body } = req;
+  return jsBody(body);
+};
 module.exports.post = (moduleName, req, res, customResponse = null) => {
   const schemaNavn = `${moduleName}-post-schema.json`;
   const label = `${moduleName}:send`;
 
   try {
-    const valid = test(label, schemaNavn, jsBody);
+    const postBody = extractPostBody(req);
+    const valid = test(label, schemaNavn, postBody);
     if (!valid) {
       return valideringFeil(req, res);
     }
@@ -18,9 +22,7 @@ module.exports.post = (moduleName, req, res, customResponse = null) => {
       const response = jsBody(customResponse);
       return res.json(response);
     }
-    const { body } = req;
-    const response = jsBody(body);
-    return res.json(response);
+    return res.json(postBody);
   } catch (err) {
     return Mock.serverError(req, res, err);
   }

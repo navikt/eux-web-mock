@@ -1,11 +1,14 @@
-const { MOCK_DATA_DIR } = require('../../mock.config');
-const { httpClient, printheader, printoppsummering, printerror, printresult } = require('./helpers');
-const { pathObject2Filename } = require('../utils/pathnames');
 const Katalog = require('../katalog');
 const Utils = require('../utils/utils');
+const { pathObject2Filename } = require('../utils/pathnames');
+const { MOCK_DATA_DIR } = require('../../mock.config');
+const {
+  httpClient, printheader, printoppsummering, printerror, printresult,
+} = require('./helpers');
+
 const client = httpClient();
 
-const lesMockPostDoc = async dirname => {
+const lesMockPostDoc = async (dirname) => {
   const POST_MOCK_DIR = `${MOCK_DATA_DIR}/${dirname}/post`;
   try {
     const exists = await Utils.existsAsync(POST_MOCK_DIR);
@@ -16,19 +19,19 @@ const lesMockPostDoc = async dirname => {
     const filenames = await Utils.readDirSync(POST_MOCK_DIR);
     const mockfile = `${POST_MOCK_DIR}/${filenames[0]}`;
     return await Utils.readJsonAndParseAsync(mockfile);
-  }
-  catch (e) {
+  } catch (e) {
     console.log('Reading POST directory failed', e);
+    return e;
   }
 };
 
 const testAll = async (verb, oppsummering) => {
-  const reportResult = res => {
+  const reportResult = (res) => {
     oppsummering.success += 1;
     printresult(res);
   };
 
-  const reportError = res => {
+  const reportError = (res) => {
     oppsummering.failure += 1;
     printerror(res);
   };
@@ -48,8 +51,7 @@ const testAll = async (verb, oppsummering) => {
       }
       try {
         await client(config).then(reportResult).catch(reportError);
-      }
-      catch (e) {
+      } catch (e) {
         oppsummering.failure += 1;
         console.log(e);
       }
