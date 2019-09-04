@@ -6,6 +6,13 @@ const pathnameMap = {
       params: { fnr: '70057418034' },
     },
   },
+  fagsaker_aw: {
+    moduleName: 'fagsaker_aw',
+    get: {
+      pathname: '/fagsaker/:fnr/?sektor=aw',
+      params: { fnr: '70057418034' },
+    },
+  },
   fagsaker_fb: {
     moduleName: 'fagsaker_fb',
     get: {

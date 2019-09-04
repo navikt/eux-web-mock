@@ -81,3 +81,4 @@ module.exports.manglerParamProduserbartDokument = (req, res) => badRequestParam(
 
 module.exports.manglerParamDokumentID = (req, res) => badRequestParam(req, res, 'DokumentID mangler');
 module.exports.manglerParamSektor = (req, res) => badRequestParam(req, res, 'Sektor mangler');
+module.exports.manglerParamTema = (req, res) => badRequestParam(req, res, 'Tema mangler');
