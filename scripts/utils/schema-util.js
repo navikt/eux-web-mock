@@ -1,11 +1,10 @@
 const Ajv = require('ajv');
+const { JSONPath } = require('jsonpath-plus');
 const glob = require('glob');
 const log4js = require('log4js');
+const logger = log4js.getLogger('schema');
 const colors = require('colors/safe');
 const emoji = require('node-emoji');
-const { JSONPath } = require('jsonpath-plus');
-
-const logger = log4js.getLogger('schema');
 
 const { MOCK_DATA_DIR, SCHEMA_DIR, DEFINITION_SCHEMA } = require('../../mock.config');
 const Utils = require('./utils');
