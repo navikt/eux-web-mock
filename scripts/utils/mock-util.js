@@ -1,7 +1,6 @@
 const log4js = require('log4js');
-const ERR = require('./errors');
-
 const logger = log4js.getLogger('mock');
+const ERR = require('./errors');
 
 module.exports.notFound = (req, res, message) => {
   const melding = ERR.notFound404(message);

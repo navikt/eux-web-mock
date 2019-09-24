@@ -9,21 +9,21 @@ const pathnameMap = {
   fagsaker_aw: {
     moduleName: 'fagsaker_aw',
     get: {
-      pathname: '/fagsaker/:fnr/?sektor=aw',
+      pathname: '/fagsaker/:fnr/?sektor=aw&tema=GEN',
       params: { fnr: '70057418034' },
     },
   },
   fagsaker_fb: {
     moduleName: 'fagsaker_fb',
     get: {
-      pathname: '/fagsaker/:fnr/?sektor=fb',
+      pathname: '/fagsaker/:fnr/?sektor=fb&tema=GEN',
       params: { fnr: '70057418034' },
     },
   },
   fagsaker_ub: {
     moduleName: 'fagsaker_ub',
     get: {
-      pathname: '/fagsaker/:fnr/?sektor=ub',
+      pathname: '/fagsaker/:fnr/?sektor=ub&tema=GEN',
       params: { fnr: '70057418034' },
     },
   },
