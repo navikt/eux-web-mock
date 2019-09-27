@@ -10,7 +10,7 @@
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
     "cross-env": "^5.2.1",
-    "eessi-kodeverk": "^1.1.1",
+    "eessi-kodeverk": "^1.1.2",
     "eux-schema": "^0.3.0",
     "express": "^4.17.1",
     "get-installed-path": "^4.0.8",
