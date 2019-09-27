@@ -45,6 +45,6 @@ module.exports.printerror = (res) => {
 module.exports.printoppsummering = (oppsummering, method) => {
   console.log(`[${method.toUpperCase()}]`, colors.green(`yarn mock:${method.toLowerCase()}`));
   const successText = `Success: ${colors.green(oppsummering.success)}`;
-  const failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}`: `Failure: ${colors.white(oppsummering.failure)}`;
+  const failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}` : `Failure: ${colors.white(oppsummering.failure)}`;
   console.log(`{ ${successText}, ${failureText} }`);
 };

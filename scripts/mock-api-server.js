@@ -1,6 +1,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const log4js = require('log4js');
 
 const Serverinfo = require('./utils/server-info');
 const logging = require('./utils/logging');
@@ -19,24 +20,30 @@ createLogDirIfnotExists(LOGDIR);
 
 const MOCK_LOG_FILE = `${LOGDIR}/mock-errors.log`;
 const WEB_MOCK_LOG_FILE = `${LOGDIR}/web-mock-errors.log`;
-const log4js = require('log4js');
+
 log4js.configure({
   appenders: {
-    mock: { type: 'file', filename: MOCK_LOG_FILE, maxLogSize: 10485760, backups: 3, compress: true },
-    webmock: { type: 'file', filename: WEB_MOCK_LOG_FILE, maxLogSize: 10485760, backups: 3, compress: true }
+    mock: {
+      type: 'file', filename: MOCK_LOG_FILE, maxLogSize: 10485760, backups: 3, compress: true,
+    },
+    webmock: {
+      type: 'file', filename: WEB_MOCK_LOG_FILE, maxLogSize: 10485760, backups: 3, compress: true,
+    },
   },
-  categories: { default: { appenders: ['mock','webmock'], level: 'debug' } }
+  categories: {
+    default: { appenders: ['mock', 'webmock'], level: 'debug' },
+  },
 });
 const app = express();
 
-const allowCrossDomain = (req, res, next)  => {
+const allowCrossDomain = (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 };
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
@@ -95,4 +102,4 @@ app.use('/eux/api', router);
 app.use('/frontendlogger', express.static('static'));
 
 app.listen(port);
-console.log('Test EUX mock API server running on http://'+Serverinfo.getIpAdress()+':' + port+'/api');
+console.log(`Test EUX mock API server running on http://${Serverinfo.getIpAdress()}:${port}/api`);
