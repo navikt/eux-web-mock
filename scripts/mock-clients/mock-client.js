@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Katalog = require('../katalog');
 const Utils = require('../utils/utils');
 const { pathObject2Filename } = require('../utils/pathnames');

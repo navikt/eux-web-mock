@@ -1,3 +1,4 @@
+// eslint-disable
 const pathnameMap = {
   arbeidsforhold: {
     moduleName: 'arbeidsforhold',
@@ -116,10 +117,8 @@ const pathnameMap = {
 };
 
 const katalog = [];
-for (const path in pathnameMap) {
-  const strings = [path, pathnameMap[path]];
-  katalog.push(strings);
-}
+Object.entries(pathnameMap).forEach((path) => katalog.push(path));
+
 const katalogMap = new Map(katalog);
 module.exports = {
   pathnameMap,
