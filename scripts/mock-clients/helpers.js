@@ -11,7 +11,7 @@ module.exports.httpClient = () => {
   axios.defaults.headers.put['Content-Type'] = 'text/plain';
   return axios.create({
     baseURL: `${API_BASE_URL}`,
-    timeout: 1000,
+    timeout: 5000,
     proxy: false,
   });
 };
@@ -45,6 +45,6 @@ module.exports.printerror = (res) => {
 module.exports.printoppsummering = (oppsummering, method) => {
   console.log(`[${method.toUpperCase()}]`, colors.green(`yarn mock:${method.toLowerCase()}`));
   const successText = `Success: ${colors.green(oppsummering.success)}`;
-  const failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}`: `Failure: ${colors.white(oppsummering.failure)}`;
+  const failureText = oppsummering.failure > 0 ? `Failure: ${colors.bgRed(oppsummering.failure)}` : `Failure: ${colors.white(oppsummering.failure)}`;
   console.log(`{ ${successText}, ${failureText} }`);
 };
