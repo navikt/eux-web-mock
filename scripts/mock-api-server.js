@@ -12,6 +12,7 @@ const Landkoder = require('./modules/landkoder');
 const Personer = require('./modules/personer');
 const Rina = require('./modules/rina');
 const Saksbehandler = require('./modules/saksbehandler');
+const Enhet = require('./modules/enhet');
 
 const createLogDirIfnotExists = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir);
 const LOGDIR = `${process.cwd()}/logdir`;
@@ -59,6 +60,8 @@ router.get('/landkoder/:buctype', Landkoder.hent);
 /**
  * SAKSBEHANDLER
  */
+router.get('/saksbehandler/enheter', Enhet.hent);
+
 router.get('/saksbehandler', Saksbehandler.hent);
 
 /**
