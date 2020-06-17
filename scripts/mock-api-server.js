@@ -14,6 +14,7 @@ const Rina = require('./modules/rina');
 const Saksbehandler = require('./modules/saksbehandler');
 const Enhet = require('./modules/enhet');
 const UtgaarDato = require('./modules/utgaarDato');
+const Saksnummer = require('./modules/saksnummer');
 
 const createLogDirIfnotExists = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir);
 const LOGDIR = `${process.cwd()}/logdir`;
@@ -67,6 +68,7 @@ router.get('/saksbehandler/utgaarDato', UtgaarDato.hent);
 
 router.get('/saksbehandler', Saksbehandler.hent);
 
+router.get('/saksnummer/:saksnummer', Saksnummer.hent);
 /**
  * PERSON
  * ---------------------------------------------------------------
