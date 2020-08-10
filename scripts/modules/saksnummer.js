@@ -10,7 +10,7 @@ const Mock = require('../utils/mock-util');
  */
 module.exports.hent = async (req, res) => {
   try {
-      const saksnummer = { foo: 'bar' }
+      const saksnummer = [{ label: 'bar', value: 'bar' }]
     res.json(saksnummer);
   } catch (err) {
     Mock.serverError(req, res, err);

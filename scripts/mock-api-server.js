@@ -15,6 +15,7 @@ const Saksbehandler = require('./modules/saksbehandler');
 const Enhet = require('./modules/enhet');
 const UtgaarDato = require('./modules/utgaarDato');
 const Saksnummer = require('./modules/saksnummer');
+const Inntekt = require('./modules/inntekt');
 
 const createLogDirIfnotExists = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir);
 const LOGDIR = `${process.cwd()}/logdir`;
@@ -59,6 +60,7 @@ router.post('/logger/error', logging.error);
  */
 router.get('/arbeidsforhold/:fnr', Arbeidsforhold.hent);
 router.get('/landkoder/:buctype', Landkoder.hent);
+router.get('/inntekt/:fnr/:fraDato/:tilDato/:tema', Inntekt.hent);
 /**
  * SAKSBEHANDLER
  */
