@@ -2,6 +2,7 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const log4js = require('log4js');
 const Serverinfo = require('./utils/server-info');
 const logging = require('./utils/logging');
 
@@ -14,7 +15,8 @@ const Rina = require('./modules/rina');
 const Saksbehandler = require('./modules/saksbehandler');
 const Enhet = require('./modules/enhet');
 const UtgaarDato = require('./modules/utgaarDato');
-const Saksnummer = require('./modules/saksnummer');
+const Reautorisering = require('./modules/reautorisering');
+const Svarpasedtyper = require('./modules/svarpasedtyper');
 const Inntekt = require('./modules/inntekt');
 
 const createLogDirIfnotExists = (dir) => !fs.existsSync(dir) && fs.mkdirSync(dir);
@@ -23,7 +25,6 @@ createLogDirIfnotExists(LOGDIR);
 
 const MOCK_LOG_FILE = `${LOGDIR}/mock-errors.log`;
 const WEB_MOCK_LOG_FILE = `${LOGDIR}/web-mock-errors.log`;
-const log4js = require('log4js');
 log4js.configure({
   appenders: {
     mock: { type: 'file', filename: MOCK_LOG_FILE, maxLogSize: 10485760, backups: 3, compress: true },
@@ -47,62 +48,51 @@ app.use(bodyParser.raw());
 const port = process.env.PORT || 3002;
 const router = express.Router();
 
-router.get('/serverinfo', Serverinfo.hentServerInfo);
+/**
+ * LOGGING
+ */
 // router.post('/logger/trace', logging.trace);
 // router.post('/logger/debug', logging.debug);
 router.post('/logger/info', logging.info);
 router.post('/logger/warn', logging.warn);
 router.post('/logger/error', logging.error);
 
+/**
+ * RINA
+ */
+router.get('/institusjoner/:buctype/', Institusjoner.hent);
+router.get('/landkoder/:buctype', Landkoder.hent);
+router.post('/rina/sak', Rina.sak.sendSak);
+router.post('/rina/sak/:rinasakid/sed', Rina.svarpased.sendSak);
+router.get('/rina/svarsedtyper', Svarpasedtyper.hent);
 
 /**
- * ARBEIDSFORHOLD
+ * REGISTRE
  */
 router.get('/arbeidsforhold/:fnr', Arbeidsforhold.hent);
-router.get('/landkoder/:buctype', Landkoder.hent);
+router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 router.get('/inntekt/:fnr/:fraDato/:tilDato/:tema', Inntekt.hent);
+router.get('/personer', Personer.hent);
+
 /**
  * SAKSBEHANDLER
  */
 router.get('/saksbehandler/enheter', Enhet.hent);
-
 router.get('/saksbehandler/utgaarDato', UtgaarDato.hent);
-
+router.get('/saksbehandler/reautentisering', Reautorisering.hent);
 router.get('/saksbehandler', Saksbehandler.hent);
 
-router.get('/saksnummer/:saksnummer', Saksnummer.hent);
 /**
- * PERSON
- * ---------------------------------------------------------------
+ * SERVER INFORMASJON
  */
-router.get('/personer', Personer.hent);
-// TODO router.get('/personer/andre', Personer.hentAndre);
+router.get('/serverinfo', Serverinfo.hentServerInfo);
 
-router.get('/institusjoner/:buctype/', Institusjoner.hent);
-
-router.get('/fagsaker/:fnr/', Fagsaker.saksliste);
 /**
- * RINA
+ * VEDLEGG
  */
-router.post('/rina/sak', Rina.sak.sendSak);
 router.post('/rina/vedlegg', Rina.vedlegg.sendVedlegg);
-// ?rinasaksnummer=12334566
 router.get('/rina/dokumenter/', Rina.dokumenter.hentDokument);
-/*
-//Kun tall
-rinasaksnummer = 161007 => {
-kode: SED_F001,
-rinadokumentID: 760c632d67da4bc, // UUID
-},
-rinasaksnummer = 268016 => [{}],
 
-router.get('/rina/dokumenter/?rinasaksnummer', Rinasak.hent);
-[{
-  kode: 'SED_F001',
-  rinadokumentID: 760c632d67da4bc, // UUID
-}]
-=
- */
 app.use(allowCrossDomain);
 app.use('/api', router);
 
